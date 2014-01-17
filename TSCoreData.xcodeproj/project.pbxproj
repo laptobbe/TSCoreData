@@ -13,7 +13,33 @@
 		F6E1DCEF1889AD5700E23A65 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F6E1DCED1889AD5700E23A65 /* InfoPlist.strings */; };
 		F6E1DCF71889AD7000E23A65 /* TSCoreDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E1DCF61889AD7000E23A65 /* TSCoreDataTests.m */; };
 		F6E1DCF91889ADA400E23A65 /* TSCoreData.podspec in Resources */ = {isa = PBXBuildFile; fileRef = F6E1DCF81889ADA400E23A65 /* TSCoreData.podspec */; };
+		F6E1DD301889E03800E23A65 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F60A016E174E888D009A7F29 /* Foundation.framework */; };
+		F6E1DD311889E03800E23A65 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F60A01B3174EA714009A7F29 /* CoreGraphics.framework */; };
+		F6E1DD321889E03800E23A65 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6E1DCC71889AC7400E23A65 /* UIKit.framework */; };
+		F6E1DD461889E03800E23A65 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6E1DCC41889ABCA00E23A65 /* XCTest.framework */; };
+		F6E1DD471889E03800E23A65 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F60A016E174E888D009A7F29 /* Foundation.framework */; };
+		F6E1DD481889E03800E23A65 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6E1DCC71889AC7400E23A65 /* UIKit.framework */; };
+		F6E1DD501889E03800E23A65 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F6E1DD4E1889E03800E23A65 /* InfoPlist.strings */; };
+		F6E1DD521889E03800E23A65 /* TSCoreDataExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E1DD511889E03800E23A65 /* TSCoreDataExampleTests.m */; };
+		F6E1DD621889E05900E23A65 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F6E1DD5A1889E05900E23A65 /* InfoPlist.strings */; };
+		F6E1DD631889E05900E23A65 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6E1DD5C1889E05900E23A65 /* Images.xcassets */; };
+		F6E1DD641889E05900E23A65 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E1DD5D1889E05900E23A65 /* main.m */; };
+		F6E1DD651889E05900E23A65 /* TSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E1DD5F1889E05900E23A65 /* TSAppDelegate.m */; };
+		F6E1DD661889E05900E23A65 /* TSCoreDataExample-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F6E1DD601889E05900E23A65 /* TSCoreDataExample-Info.plist */; };
+		F6E1DD681889E0AD00E23A65 /* TSSQLCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E1DCB91889989600E23A65 /* TSSQLCoreDataStack.m */; };
+		F6E1DD691889E0AD00E23A65 /* NSManagedObjectContext+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E1DCBB1889989600E23A65 /* NSManagedObjectContext+Convenience.m */; };
+		F6E1DD6A1889E0AD00E23A65 /* TSCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E1DCBD1889989600E23A65 /* TSCoreData.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F6E1DD491889E03800E23A65 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F60A0161174E888D009A7F29 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F6E1DD2E1889E03800E23A65;
+			remoteInfo = TSCoreDataExample;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		B03F6A62E8CB4A8C80B2A1A9 /* libPods-TSCoreDataTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TSCoreDataTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -25,8 +51,8 @@
 		F60A0180174E888D009A7F29 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		F60A01B3174EA714009A7F29 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		F60A01B5174EA714009A7F29 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		F6E1DCB81889989600E23A65 /* CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStack.h; sourceTree = "<group>"; };
-		F6E1DCB91889989600E23A65 /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = "<group>"; };
+		F6E1DCB81889989600E23A65 /* TSSQLCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSSQLCoreDataStack.h; sourceTree = "<group>"; };
+		F6E1DCB91889989600E23A65 /* TSSQLCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSSQLCoreDataStack.m; sourceTree = "<group>"; };
 		F6E1DCBA1889989600E23A65 /* NSManagedObjectContext+Convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+Convenience.h"; sourceTree = "<group>"; };
 		F6E1DCBB1889989600E23A65 /* NSManagedObjectContext+Convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+Convenience.m"; sourceTree = "<group>"; };
 		F6E1DCBC1889989600E23A65 /* TSCoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCoreData.h; sourceTree = "<group>"; };
@@ -39,6 +65,18 @@
 		F6E1DCF21889AD5700E23A65 /* TSCoreDataTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TSCoreDataTests-Prefix.pch"; sourceTree = "<group>"; };
 		F6E1DCF61889AD7000E23A65 /* TSCoreDataTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCoreDataTests.m; sourceTree = "<group>"; };
 		F6E1DCF81889ADA400E23A65 /* TSCoreData.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TSCoreData.podspec; sourceTree = "<group>"; };
+		F6E1DD2F1889E03800E23A65 /* TSCoreDataExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TSCoreDataExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6E1DD451889E03800E23A65 /* TSCoreDataExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TSCoreDataExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6E1DD4D1889E03800E23A65 /* TSCoreDataExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TSCoreDataExampleTests-Info.plist"; sourceTree = "<group>"; };
+		F6E1DD4F1889E03800E23A65 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F6E1DD511889E03800E23A65 /* TSCoreDataExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSCoreDataExampleTests.m; sourceTree = "<group>"; };
+		F6E1DD5B1889E05900E23A65 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F6E1DD5C1889E05900E23A65 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F6E1DD5D1889E05900E23A65 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F6E1DD5E1889E05900E23A65 /* TSAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSAppDelegate.h; sourceTree = "<group>"; };
+		F6E1DD5F1889E05900E23A65 /* TSAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSAppDelegate.m; sourceTree = "<group>"; };
+		F6E1DD601889E05900E23A65 /* TSCoreDataExample-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TSCoreDataExample-Info.plist"; sourceTree = "<group>"; };
+		F6E1DD611889E05900E23A65 /* TSCoreDataExample-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TSCoreDataExample-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +90,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F6E1DD2C1889E03800E23A65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6E1DD311889E03800E23A65 /* CoreGraphics.framework in Frameworks */,
+				F6E1DD321889E03800E23A65 /* UIKit.framework in Frameworks */,
+				F6E1DD301889E03800E23A65 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6E1DD421889E03800E23A65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6E1DD461889E03800E23A65 /* XCTest.framework in Frameworks */,
+				F6E1DD481889E03800E23A65 /* UIKit.framework in Frameworks */,
+				F6E1DD471889E03800E23A65 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -60,6 +118,8 @@
 			children = (
 				F60A0170174E888D009A7F29 /* TSCoreData */,
 				F6E1DCEA1889AD5700E23A65 /* TSCoreDataTests */,
+				F6E1DD591889E05900E23A65 /* TSCoreDataExample */,
+				F6E1DD4B1889E03800E23A65 /* TSCoreDataExampleTests */,
 				F60A016D174E888D009A7F29 /* Frameworks */,
 				F60A017D174E888D009A7F29 /* Products */,
 			);
@@ -104,6 +164,8 @@
 			isa = PBXGroup;
 			children = (
 				F6E1DCE61889AD5700E23A65 /* TSCoreDataTests.xctest */,
+				F6E1DD2F1889E03800E23A65 /* TSCoreDataExample.app */,
+				F6E1DD451889E03800E23A65 /* TSCoreDataExampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -111,8 +173,8 @@
 		F6E1DCB71889989600E23A65 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
-				F6E1DCB81889989600E23A65 /* CoreDataStack.h */,
-				F6E1DCB91889989600E23A65 /* CoreDataStack.m */,
+				F6E1DCB81889989600E23A65 /* TSSQLCoreDataStack.h */,
+				F6E1DCB91889989600E23A65 /* TSSQLCoreDataStack.m */,
 				F6E1DCBA1889989600E23A65 /* NSManagedObjectContext+Convenience.h */,
 				F6E1DCBB1889989600E23A65 /* NSManagedObjectContext+Convenience.m */,
 				F6E1DCBC1889989600E23A65 /* TSCoreData.h */,
@@ -140,6 +202,46 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F6E1DD4B1889E03800E23A65 /* TSCoreDataExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				F6E1DD511889E03800E23A65 /* TSCoreDataExampleTests.m */,
+				F6E1DD4C1889E03800E23A65 /* Supporting Files */,
+			);
+			path = TSCoreDataExampleTests;
+			sourceTree = "<group>";
+		};
+		F6E1DD4C1889E03800E23A65 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F6E1DD4D1889E03800E23A65 /* TSCoreDataExampleTests-Info.plist */,
+				F6E1DD4E1889E03800E23A65 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F6E1DD591889E05900E23A65 /* TSCoreDataExample */ = {
+			isa = PBXGroup;
+			children = (
+				F6E1DD5E1889E05900E23A65 /* TSAppDelegate.h */,
+				F6E1DD5F1889E05900E23A65 /* TSAppDelegate.m */,
+				F6E1DD5C1889E05900E23A65 /* Images.xcassets */,
+				F6E1DD671889E06700E23A65 /* Supporting Files */,
+			);
+			path = TSCoreDataExample;
+			sourceTree = "<group>";
+		};
+		F6E1DD671889E06700E23A65 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F6E1DD5A1889E05900E23A65 /* InfoPlist.strings */,
+				F6E1DD5D1889E05900E23A65 /* main.m */,
+				F6E1DD601889E05900E23A65 /* TSCoreDataExample-Info.plist */,
+				F6E1DD611889E05900E23A65 /* TSCoreDataExample-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -160,6 +262,41 @@
 			productReference = F6E1DCE61889AD5700E23A65 /* TSCoreDataTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		F6E1DD2E1889E03800E23A65 /* TSCoreDataExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6E1DD531889E03900E23A65 /* Build configuration list for PBXNativeTarget "TSCoreDataExample" */;
+			buildPhases = (
+				F6E1DD2B1889E03800E23A65 /* Sources */,
+				F6E1DD2C1889E03800E23A65 /* Frameworks */,
+				F6E1DD2D1889E03800E23A65 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TSCoreDataExample;
+			productName = TSCoreDataExample;
+			productReference = F6E1DD2F1889E03800E23A65 /* TSCoreDataExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F6E1DD441889E03800E23A65 /* TSCoreDataExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6E1DD561889E03900E23A65 /* Build configuration list for PBXNativeTarget "TSCoreDataExampleTests" */;
+			buildPhases = (
+				F6E1DD411889E03800E23A65 /* Sources */,
+				F6E1DD421889E03800E23A65 /* Frameworks */,
+				F6E1DD431889E03800E23A65 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F6E1DD4A1889E03800E23A65 /* PBXTargetDependency */,
+			);
+			name = TSCoreDataExampleTests;
+			productName = TSCoreDataExampleTests;
+			productReference = F6E1DD451889E03800E23A65 /* TSCoreDataExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -168,6 +305,14 @@
 			attributes = {
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Computertalk Sweden";
+				TargetAttributes = {
+					F6E1DCE51889AD5700E23A65 = {
+						TestTargetID = F6E1DD2E1889E03800E23A65;
+					};
+					F6E1DD441889E03800E23A65 = {
+						TestTargetID = F6E1DD2E1889E03800E23A65;
+					};
+				};
 			};
 			buildConfigurationList = F60A0164174E888D009A7F29 /* Build configuration list for PBXProject "TSCoreData" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -182,6 +327,8 @@
 			projectRoot = "";
 			targets = (
 				F6E1DCE51889AD5700E23A65 /* TSCoreDataTests */,
+				F6E1DD2E1889E03800E23A65 /* TSCoreDataExample */,
+				F6E1DD441889E03800E23A65 /* TSCoreDataExampleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -196,6 +343,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F6E1DD2D1889E03800E23A65 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6E1DD661889E05900E23A65 /* TSCoreDataExample-Info.plist in Resources */,
+				F6E1DD621889E05900E23A65 /* InfoPlist.strings in Resources */,
+				F6E1DD631889E05900E23A65 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6E1DD431889E03800E23A65 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6E1DD501889E03800E23A65 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -207,7 +372,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F6E1DD2B1889E03800E23A65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6E1DD681889E0AD00E23A65 /* TSSQLCoreDataStack.m in Sources */,
+				F6E1DD691889E0AD00E23A65 /* NSManagedObjectContext+Convenience.m in Sources */,
+				F6E1DD6A1889E0AD00E23A65 /* TSCoreData.m in Sources */,
+				F6E1DD641889E05900E23A65 /* main.m in Sources */,
+				F6E1DD651889E05900E23A65 /* TSAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6E1DD411889E03800E23A65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6E1DD521889E03800E23A65 /* TSCoreDataExampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F6E1DD4A1889E03800E23A65 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F6E1DD2E1889E03800E23A65 /* TSCoreDataExample */;
+			targetProxy = F6E1DD491889E03800E23A65 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		F60A0173174E888D009A7F29 /* InfoPlist.strings */ = {
@@ -222,6 +415,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				F6E1DCEE1889AD5700E23A65 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F6E1DD4E1889E03800E23A65 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F6E1DD4F1889E03800E23A65 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F6E1DD5A1889E05900E23A65 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F6E1DD5B1889E05900E23A65 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -286,6 +495,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TSCoreDataExample.app/TSCoreDataExample";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
@@ -308,6 +518,7 @@
 				INFOPLIST_FILE = "TSCoreDataTests/TSCoreDataTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -316,6 +527,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TSCoreDataExample.app/TSCoreDataExample";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
@@ -335,6 +547,121 @@
 				INFOPLIST_FILE = "TSCoreDataTests/TSCoreDataTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		F6E1DD541889E03900E23A65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TSCoreDataExample/TSCoreDataExample-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "TSCoreDataExample/TSCoreDataExample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F6E1DD551889E03900E23A65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TSCoreDataExample/TSCoreDataExample-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "TSCoreDataExample/TSCoreDataExample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		F6E1DD571889E03900E23A65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TSCoreDataExample.app/TSCoreDataExample";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TSCoreDataExample/TSCoreDataExample-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "TSCoreDataExampleTests/TSCoreDataExampleTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		F6E1DD581889E03900E23A65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TSCoreDataExample.app/TSCoreDataExample";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TSCoreDataExample/TSCoreDataExample-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "TSCoreDataExampleTests/TSCoreDataExampleTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
@@ -356,6 +683,23 @@
 			buildConfigurations = (
 				F6E1DCF41889AD5700E23A65 /* Debug */,
 				F6E1DCF51889AD5700E23A65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F6E1DD531889E03900E23A65 /* Build configuration list for PBXNativeTarget "TSCoreDataExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6E1DD541889E03900E23A65 /* Debug */,
+				F6E1DD551889E03900E23A65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F6E1DD561889E03900E23A65 /* Build configuration list for PBXNativeTarget "TSCoreDataExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6E1DD571889E03900E23A65 /* Debug */,
+				F6E1DD581889E03900E23A65 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

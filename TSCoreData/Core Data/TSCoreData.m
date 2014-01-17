@@ -7,49 +7,40 @@
 //
 
 #import "TSCoreData.h"
-#import "CoreDataStack.h"
+#import "TSSQLCoreDataStack.h"
 
 @interface TSCoreData ()
 
 @property (atomic, strong) NSMutableDictionary *threadContexts;
-@property (atomic, strong) CoreDataStack *stack;
+@property (atomic, strong) id<TSCoreDataStack> stack;
 
 @end
 
 @implementation TSCoreData
 
-static TSCoreData *sharedInstance = nil;
+static TSCoreData *_sharedInstance = nil;
 
 + (id)sharedInstance {
-    NSAssert(sharedInstance != nil, @"You need to call init with model first for the shared instance to be set");
-    return sharedInstance;
+    NSAssert(_sharedInstance != nil, @"You need to call init with model first for the shared instance to be set");
+    return _sharedInstance;
 }
 
-- (id)initWithModelName:(NSString *)modelName error:(NSError **)error{
+- (id)initWithCoreDataStack:(id<TSCoreDataStack>)coreDataStack {
     
     self = [super init];
     if (self) {
-        self.threadContexts = [NSMutableDictionary dictionary];
-        self.stack = [CoreDataStack coreDataStackWithModelName:modelName error:error];
-        [self.stack setCoreDataStoreType:TSStoreTypeSQL];
+        _threadContexts = [NSMutableDictionary dictionary];
+        _stack = coreDataStack;
         
-        [[NSNotificationCenter defaultCenter] addObserver:self
-                                                 selector:@selector(contextSaved:)
-                                                     name:NSManagedObjectContextDidSaveNotification
-                                                   object:nil];
-        
-        [[NSNotificationCenter defaultCenter] addObserver:self
-                                                 selector:@selector(threadDone:)
-                                                     name:NSThreadWillExitNotification
-                                                   object:nil];
-        sharedInstance = self;
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(contextSaved:) name:NSManagedObjectContextDidSaveNotification object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(threadDone:) name:NSThreadWillExitNotification object:nil];
+        _sharedInstance = self;
     }
     return self;
 }
 
-- (void)clear {
-    [[self stack] wipeAllData];
-    [[self threadContexts] removeAllObjects];
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)contextSaved:(NSNotification *)didSaveNotification {
@@ -60,13 +51,14 @@ static TSCoreData *sharedInstance = nil;
         
         if (mainContext && didSaveNotification.object != mainContext && [self.threadContexts objectForKey:savedContext.description]) {
             [mainContext mergeChangesFromContextDidSaveNotification:didSaveNotification];
-            
         }
     });
 }
 
 - (void)threadDone:(NSNotification *)notification {
-    [self.threadContexts removeObjectForKey:[[notification object] description]];
+    @synchronized(self){
+        [self.threadContexts removeObjectForKey:[[notification object] description]];
+    }
 }
 
 - (void)sendRequest:(NSFetchRequest *)fetchRequest withHandleBlock:(TSCoreDataFetchBlock)block{
@@ -91,10 +83,6 @@ static TSCoreData *sharedInstance = nil;
     }
 }
 
-- (NSManagedObjectContext *) newManagedObjectContext{
-    return [[self stack] newManagedObjectContext];
-}
-
 - (NSManagedObjectContext *) context {
     return [self managedObjectContextForThread:[NSThread currentThread]];
 }
@@ -115,7 +103,7 @@ static TSCoreData *sharedInstance = nil;
     @synchronized(self){
         NSManagedObjectContext *context = [self.threadContexts objectForKey:thread.description];
         if (!context) {
-            context = [self.stack newManagedObjectContext];
+            context = [self.stack createManagedObjectContext];
             [self.threadContexts setObject:context forKey:thread.description];
         }
         return context;
