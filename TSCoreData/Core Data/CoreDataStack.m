@@ -69,7 +69,7 @@
     
     NSPersistentStoreCoordinator *persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:managedObjectModel];
     
-    NSString *storeTypeString;
+    NSString *storeTypeString = nil;
     switch(storeType)
     {
         case TSStoreTypeXML:
