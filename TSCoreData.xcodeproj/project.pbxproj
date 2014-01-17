@@ -7,62 +7,48 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F60A016F174E888D009A7F29 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F60A016E174E888D009A7F29 /* Foundation.framework */; };
-		F60A0175174E888D009A7F29 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F60A0173174E888D009A7F29 /* InfoPlist.strings */; };
-		F60A017F174E888D009A7F29 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F60A017E174E888D009A7F29 /* SenTestingKit.framework */; };
-		F60A0181174E888D009A7F29 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F60A0180174E888D009A7F29 /* UIKit.framework */; };
-		F60A0182174E888D009A7F29 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F60A016E174E888D009A7F29 /* Foundation.framework */; };
-		F60A018C174E888D009A7F29 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F60A018A174E888D009A7F29 /* InfoPlist.strings */; };
-		F60A018F174E888D009A7F29 /* TSCoreDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F60A018E174E888D009A7F29 /* TSCoreDataTests.m */; };
+		F6E1DCE71889AD5700E23A65 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6E1DCC41889ABCA00E23A65 /* XCTest.framework */; };
+		F6E1DCE81889AD5700E23A65 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F60A016E174E888D009A7F29 /* Foundation.framework */; };
+		F6E1DCE91889AD5700E23A65 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6E1DCC71889AC7400E23A65 /* UIKit.framework */; };
+		F6E1DCEF1889AD5700E23A65 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F6E1DCED1889AD5700E23A65 /* InfoPlist.strings */; };
+		F6E1DCF71889AD7000E23A65 /* TSCoreDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E1DCF61889AD7000E23A65 /* TSCoreDataTests.m */; };
+		F6E1DCF91889ADA400E23A65 /* TSCoreData.podspec in Resources */ = {isa = PBXBuildFile; fileRef = F6E1DCF81889ADA400E23A65 /* TSCoreData.podspec */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		F60A0183174E888D009A7F29 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F60A0161174E888D009A7F29 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F60A016C174E888D009A7F29;
-			remoteInfo = TSCoreData;
-		};
-		F60A0185174E888D009A7F29 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F60A0161174E888D009A7F29 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F60A016C174E888D009A7F29;
-			remoteInfo = TSCoreData;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		B03F6A62E8CB4A8C80B2A1A9 /* libPods-TSCoreDataTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TSCoreDataTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F60A016E174E888D009A7F29 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F60A0172174E888D009A7F29 /* TSCoreData-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TSCoreData-Info.plist"; sourceTree = "<group>"; };
 		F60A0174174E888D009A7F29 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F60A0176174E888D009A7F29 /* TSCoreData-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TSCoreData-Prefix.pch"; sourceTree = "<group>"; };
-		F60A017C174E888D009A7F29 /* TSCoreDataTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TSCoreDataTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F60A017E174E888D009A7F29 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		F60A0180174E888D009A7F29 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		F60A0189174E888D009A7F29 /* TSCoreDataTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TSCoreDataTests-Info.plist"; sourceTree = "<group>"; };
-		F60A018B174E888D009A7F29 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		F60A018D174E888D009A7F29 /* TSCoreDataTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSCoreDataTests.h; sourceTree = "<group>"; };
-		F60A018E174E888D009A7F29 /* TSCoreDataTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSCoreDataTests.m; sourceTree = "<group>"; };
+		F60A01B3174EA714009A7F29 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F60A01B5174EA714009A7F29 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		F6E1DCB81889989600E23A65 /* CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStack.h; sourceTree = "<group>"; };
+		F6E1DCB91889989600E23A65 /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = "<group>"; };
+		F6E1DCBA1889989600E23A65 /* NSManagedObjectContext+Convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+Convenience.h"; sourceTree = "<group>"; };
+		F6E1DCBB1889989600E23A65 /* NSManagedObjectContext+Convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+Convenience.m"; sourceTree = "<group>"; };
+		F6E1DCBC1889989600E23A65 /* TSCoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCoreData.h; sourceTree = "<group>"; };
+		F6E1DCBD1889989600E23A65 /* TSCoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCoreData.m; sourceTree = "<group>"; };
+		F6E1DCC41889ABCA00E23A65 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		F6E1DCC71889AC7400E23A65 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F6E1DCE61889AD5700E23A65 /* TSCoreDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TSCoreDataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6E1DCEC1889AD5700E23A65 /* TSCoreDataTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TSCoreDataTests-Info.plist"; sourceTree = "<group>"; };
+		F6E1DCEE1889AD5700E23A65 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F6E1DCF21889AD5700E23A65 /* TSCoreDataTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TSCoreDataTests-Prefix.pch"; sourceTree = "<group>"; };
+		F6E1DCF61889AD7000E23A65 /* TSCoreDataTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCoreDataTests.m; sourceTree = "<group>"; };
+		F6E1DCF81889ADA400E23A65 /* TSCoreData.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TSCoreData.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F60A0167174E888D009A7F29 /* Frameworks */ = {
+		F6E1DCE31889AD5700E23A65 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F60A016F174E888D009A7F29 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F60A0178174E888D009A7F29 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F60A017F174E888D009A7F29 /* SenTestingKit.framework in Frameworks */,
-				F60A0181174E888D009A7F29 /* UIKit.framework in Frameworks */,
-				F60A0182174E888D009A7F29 /* Foundation.framework in Frameworks */,
+				F6E1DCE71889AD5700E23A65 /* XCTest.framework in Frameworks */,
+				F6E1DCE91889AD5700E23A65 /* UIKit.framework in Frameworks */,
+				F6E1DCE81889AD5700E23A65 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,7 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				F60A0170174E888D009A7F29 /* TSCoreData */,
-				F60A0187174E888D009A7F29 /* TSCoreDataTests */,
+				F6E1DCEA1889AD5700E23A65 /* TSCoreDataTests */,
 				F60A016D174E888D009A7F29 /* Frameworks */,
 				F60A017D174E888D009A7F29 /* Products */,
 			);
@@ -82,9 +68,14 @@
 		F60A016D174E888D009A7F29 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F6E1DCC71889AC7400E23A65 /* UIKit.framework */,
+				F6E1DCC41889ABCA00E23A65 /* XCTest.framework */,
 				F60A016E174E888D009A7F29 /* Foundation.framework */,
 				F60A017E174E888D009A7F29 /* SenTestingKit.framework */,
 				F60A0180174E888D009A7F29 /* UIKit.framework */,
+				B03F6A62E8CB4A8C80B2A1A9 /* libPods-TSCoreDataTests.a */,
+				F60A01B3174EA714009A7F29 /* CoreGraphics.framework */,
+				F60A01B5174EA714009A7F29 /* CoreData.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -92,6 +83,7 @@
 		F60A0170174E888D009A7F29 /* TSCoreData */ = {
 			isa = PBXGroup;
 			children = (
+				F6E1DCB71889989600E23A65 /* Core Data */,
 				F60A0171174E888D009A7F29 /* Supporting Files */,
 			);
 			path = TSCoreData;
@@ -100,6 +92,7 @@
 		F60A0171174E888D009A7F29 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F6E1DCF81889ADA400E23A65 /* TSCoreData.podspec */,
 				F60A0172174E888D009A7F29 /* TSCoreData-Info.plist */,
 				F60A0173174E888D009A7F29 /* InfoPlist.strings */,
 				F60A0176174E888D009A7F29 /* TSCoreData-Prefix.pch */,
@@ -110,82 +103,62 @@
 		F60A017D174E888D009A7F29 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F60A017C174E888D009A7F29 /* TSCoreDataTests.octest */,
+				F6E1DCE61889AD5700E23A65 /* TSCoreDataTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F60A0187174E888D009A7F29 /* TSCoreDataTests */ = {
+		F6E1DCB71889989600E23A65 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
-				F60A018D174E888D009A7F29 /* TSCoreDataTests.h */,
-				F60A018E174E888D009A7F29 /* TSCoreDataTests.m */,
-				F60A0188174E888D009A7F29 /* Supporting Files */,
+				F6E1DCB81889989600E23A65 /* CoreDataStack.h */,
+				F6E1DCB91889989600E23A65 /* CoreDataStack.m */,
+				F6E1DCBA1889989600E23A65 /* NSManagedObjectContext+Convenience.h */,
+				F6E1DCBB1889989600E23A65 /* NSManagedObjectContext+Convenience.m */,
+				F6E1DCBC1889989600E23A65 /* TSCoreData.h */,
+				F6E1DCBD1889989600E23A65 /* TSCoreData.m */,
+			);
+			path = "Core Data";
+			sourceTree = "<group>";
+		};
+		F6E1DCEA1889AD5700E23A65 /* TSCoreDataTests */ = {
+			isa = PBXGroup;
+			children = (
+				F6E1DCF61889AD7000E23A65 /* TSCoreDataTests.m */,
+				F6E1DCEB1889AD5700E23A65 /* Supporting Files */,
 			);
 			path = TSCoreDataTests;
 			sourceTree = "<group>";
 		};
-		F60A0188174E888D009A7F29 /* Supporting Files */ = {
+		F6E1DCEB1889AD5700E23A65 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				F60A0189174E888D009A7F29 /* TSCoreDataTests-Info.plist */,
-				F60A018A174E888D009A7F29 /* InfoPlist.strings */,
+				F6E1DCEC1889AD5700E23A65 /* TSCoreDataTests-Info.plist */,
+				F6E1DCED1889AD5700E23A65 /* InfoPlist.strings */,
+				F6E1DCF21889AD5700E23A65 /* TSCoreDataTests-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		F60A0168174E888D009A7F29 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
-		F60A016C174E888D009A7F29 /* TSCoreData */ = {
+		F6E1DCE51889AD5700E23A65 /* TSCoreDataTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F60A0192174E888D009A7F29 /* Build configuration list for PBXNativeTarget "TSCoreData" */;
+			buildConfigurationList = F6E1DCF31889AD5700E23A65 /* Build configuration list for PBXNativeTarget "TSCoreDataTests" */;
 			buildPhases = (
-				F60A0165174E888D009A7F29 /* ShellScript */,
-				F60A0166174E888D009A7F29 /* Sources */,
-				F60A0167174E888D009A7F29 /* Frameworks */,
-				F60A0168174E888D009A7F29 /* Headers */,
-				F60A0169174E888D009A7F29 /* Resources */,
-				F60A016A174E888D009A7F29 /* ShellScript */,
-				F60A016B174E888D009A7F29 /* ShellScript */,
+				F6E1DCE21889AD5700E23A65 /* Sources */,
+				F6E1DCE31889AD5700E23A65 /* Frameworks */,
+				F6E1DCE41889AD5700E23A65 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-			);
-			name = TSCoreData;
-			productName = TSCoreData;
-			productType = "com.apple.product-type.framework.static";
-		};
-		F60A017B174E888D009A7F29 /* TSCoreDataTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F60A0195174E888D009A7F29 /* Build configuration list for PBXNativeTarget "TSCoreDataTests" */;
-			buildPhases = (
-				F60A0177174E888D009A7F29 /* Sources */,
-				F60A0178174E888D009A7F29 /* Frameworks */,
-				F60A0179174E888D009A7F29 /* Resources */,
-				F60A017A174E888D009A7F29 /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F60A0184174E888D009A7F29 /* PBXTargetDependency */,
-				F60A0186174E888D009A7F29 /* PBXTargetDependency */,
 			);
 			name = TSCoreDataTests;
 			productName = TSCoreDataTests;
-			productReference = F60A017C174E888D009A7F29 /* TSCoreDataTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productReference = F6E1DCE61889AD5700E23A65 /* TSCoreDataTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -208,116 +181,33 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F60A016C174E888D009A7F29 /* TSCoreData */,
-				F60A017B174E888D009A7F29 /* TSCoreDataTests */,
+				F6E1DCE51889AD5700E23A65 /* TSCoreDataTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F60A0169174E888D009A7F29 /* Resources */ = {
+		F6E1DCE41889AD5700E23A65 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F60A0175174E888D009A7F29 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F60A0179174E888D009A7F29 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F60A018C174E888D009A7F29 /* InfoPlist.strings in Resources */,
+				F6E1DCF91889ADA400E23A65 /* TSCoreData.podspec in Resources */,
+				F6E1DCEF1889AD5700E23A65 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		F60A0165174E888D009A7F29 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "set -e\n\nset +u\nif [[ $UFW_MASTER_SCRIPT_RUNNING ]]\nthen\n    # Nothing for the slave script to do\n    exit 0\nfi\nset -u\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\n    UFW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find platform name from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\n\tUFW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find sdk version  from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$UFW_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\n    UFW_OTHER_PLATFORM=iphonesimulator\nelse\n    UFW_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$UFW_SDK_PLATFORM$ ]]\nthen\n    UFW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${UFW_OTHER_PLATFORM}\"\nelse\n    echo \"Could not find $UFW_SDK_PLATFORM in $BUILT_PRODUCTS_DIR\"\n    exit 1\nfi\n\nONLY_ACTIVE_PLATFORM=${ONLY_ACTIVE_PLATFORM:-$ONLY_ACTIVE_ARCH}\n\n# Short-circuit if all binaries are up to date\n\nif [[ -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && \\\n   [[ -f \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n   [[ ! \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n  ([[ \"${ONLY_ACTIVE_PLATFORM}\" == \"YES\" ]] || \\\n    ([[ -f \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && \\\n     [[ -f \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n     [[ ! \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\n    )\n  )\nthen\n    exit 0\nfi\n\n\n# Clean other platform if needed\n\nif [[ ! -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && [[ \"${ONLY_ACTIVE_PLATFORM}\" != \"YES\" ]]\nthen\n\techo \"Platform \\\"$UFW_SDK_PLATFORM\\\" was cleaned recently. Cleaning \\\"$UFW_OTHER_PLATFORM\\\" as well\"\n\techo xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" clean\n\txcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" clean\nfi\n\n\n# Make sure we are building from fresh binaries\n\nrm -rf \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nrm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\n\nif [[ \"${ONLY_ACTIVE_PLATFORM}\" != \"YES\" ]]\nthen\n    rm -rf \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\n    rm -rf \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\nfi\n";
-		};
-		F60A016A174E888D009A7F29 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "HEADERS_ROOT=$SRCROOT/$PRODUCT_NAME\nFRAMEWORK_HEADERS_DIR=\"$BUILT_PRODUCTS_DIR/$WRAPPER_NAME/Versions/$FRAMEWORK_VERSION/Headers\"\n\n## only header files expected at this point\nPUBLIC_HEADERS=$(find $FRAMEWORK_HEADERS_DIR/. -not -type d 2> /dev/null | sed -e \"s@.*/@@g\")\n\nFIND_OPTS=\"\"\nfor PUBLIC_HEADER in $PUBLIC_HEADERS; do\n  if [ -n \"$FIND_OPTS\" ]; then\n    FIND_OPTS=\"$FIND_OPTS -o\"\n  fi\n  FIND_OPTS=\"$FIND_OPTS -name '$PUBLIC_HEADER'\"\ndone\n\nif [ -n \"$FIND_OPTS\" ]; then\n  for ORIG_HEADER in $(eval \"find $HEADERS_ROOT/. $FIND_OPTS\" 2> /dev/null | sed -e \"s@^$HEADERS_ROOT/./@@g\"); do\n    PUBLIC_HEADER=$(basename $ORIG_HEADER)\n    RELATIVE_PATH=$(dirname $ORIG_HEADER)\n    if [ -e $FRAMEWORK_HEADERS_DIR/$PUBLIC_HEADER ]; then\n      mkdir -p \"$FRAMEWORK_HEADERS_DIR/$RELATIVE_PATH\"\n      mv \"$FRAMEWORK_HEADERS_DIR/$PUBLIC_HEADER\" \"$FRAMEWORK_HEADERS_DIR/$RELATIVE_PATH/$PUBLIC_HEADER\"\n    fi\n  done\nfi\n";
-		};
-		F60A016B174E888D009A7F29 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "set -e\n\nset +u\nif [[ $UFW_MASTER_SCRIPT_RUNNING ]]\nthen\n    # Nothing for the slave script to do\n    exit 0\nfi\nset -u\nexport UFW_MASTER_SCRIPT_RUNNING=1\n\n\n# Functions\n\n## List files in the specified directory, storing to the specified array.\n#\n# @param $1 The path to list\n# @param $2 The name of the array to fill\n#\n##\nlist_files ()\n{\n    filelist=$(ls \"$1\")\n    while read line\n    do\n        eval \"$2[\\${#$2[*]}]=\\\"\\$line\\\"\"\n    done <<< \"$filelist\"\n}\n\n\n# Sanity check\n\nif [[ ! -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]]\nthen\n    echo \"Framework target \\\"${TARGET_NAME}\\\" had no source files to build from. Make sure your source files have the correct target membership\"\n    exit 1\nfi\n\n\n# Gather information\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\n    UFW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find platform name from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\n    UFW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$UFW_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\n    UFW_OTHER_PLATFORM=iphonesimulator\nelse\n    UFW_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$UFW_SDK_PLATFORM$ ]]\nthen\n    UFW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${UFW_OTHER_PLATFORM}\"\nelse\n    echo \"Could not find $UFW_SDK_PLATFORM in $BUILT_PRODUCTS_DIR\"\n    exit 1\nfi\n\nONLY_ACTIVE_PLATFORM=${ONLY_ACTIVE_PLATFORM:-$ONLY_ACTIVE_ARCH}\n\n# Short-circuit if all binaries are up to date.\n# We already checked the other platform in the prerun script.\n\nif [[ -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && [[ -f \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && [[ ! \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\nthen\n    exit 0\nfi\n\nif [ \"${ONLY_ACTIVE_PLATFORM}\" == \"YES\" ]\nthen\n    echo \"ONLY_ACTIVE_PLATFORM=${ONLY_ACTIVE_PLATFORM}: Skipping other platform build\"\nelse\n    # Make sure the other platform gets built\n    \n    echo \"Build other platform\"\n    \n    echo xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" $ACTION\n    xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" $ACTION\n    \n    \n    # Build the fat static library binary\n    \n    echo \"Create universal static library\"\n    \n    echo \"$PLATFORM_DEVELOPER_BIN_DIR/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\n    \"$PLATFORM_DEVELOPER_BIN_DIR/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\n    \n    echo mv \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\" \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\n    mv \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\" \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nfi\n\n# Build embedded framework structure\n\necho \"Build Embedded Framework\"\n\necho rm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\nrm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\necho mkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources\"\nmkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources\"\necho cp -a \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/\"\ncp -a \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/\"\n\ndeclare -a UFW_FILE_LIST\nlist_files \"${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\" UFW_FILE_LIST\nfor filename in \"${UFW_FILE_LIST[@]}\"\ndo\n    if [[ \"${filename}\" != \"Info.plist\" ]] && [[ ! \"${filename}\" =~ .*\\.lproj$ ]]\n    then\n        echo ln -sfh \"../${WRAPPER_NAME}/Resources/${filename}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources/${filename}\"\n        ln -sfh \"../${WRAPPER_NAME}/Resources/${filename}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources/${filename}\"\n    fi\ndone\n\n\nif [ \"${ONLY_ACTIVE_PLATFORM}\" != \"YES\" ]\nthen\n    # Replace other platform's framework with a copy of this one (so that both have the same universal binary)\n    \n    echo \"Copy from $UFW_SDK_PLATFORM to $UFW_OTHER_PLATFORM\"\n    \n    echo rm -rf \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\n    rm -rf \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\n    echo cp -a \"${BUILD_DIR}/${CONFIGURATION}-${UFW_SDK_PLATFORM}\" \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\n    cp -a \"${BUILD_DIR}/${CONFIGURATION}-${UFW_SDK_PLATFORM}\" \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\nfi\n";
-		};
-		F60A017A174E888D009A7F29 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		F60A0166174E888D009A7F29 /* Sources */ = {
+		F6E1DCE21889AD5700E23A65 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F60A0177174E888D009A7F29 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F60A018F174E888D009A7F29 /* TSCoreDataTests.m in Sources */,
+				F6E1DCF71889AD7000E23A65 /* TSCoreDataTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		F60A0184174E888D009A7F29 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F60A016C174E888D009A7F29 /* TSCoreData */;
-			targetProxy = F60A0183174E888D009A7F29 /* PBXContainerItemProxy */;
-		};
-		F60A0186174E888D009A7F29 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F60A016C174E888D009A7F29 /* TSCoreData */;
-			targetProxy = F60A0185174E888D009A7F29 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		F60A0173174E888D009A7F29 /* InfoPlist.strings */ = {
@@ -328,10 +218,10 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		F60A018A174E888D009A7F29 /* InfoPlist.strings */ = {
+		F6E1DCED1889AD5700E23A65 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F60A018B174E888D009A7F29 /* en */,
+				F6E1DCEE1889AD5700E23A65 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -392,71 +282,60 @@
 			};
 			name = Release;
 		};
-		F60A0193174E888D009A7F29 /* Debug */ = {
+		F6E1DCF41889AD5700E23A65 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					armv6,
-					"$(ARCHS_STANDARD_32_BIT)",
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TSCoreData/TSCoreData-Prefix.pch";
-				INFOPLIST_FILE = "TSCoreData/TSCoreData-Info.plist";
+				GCC_PREFIX_HEADER = "TSCoreDataTests/TSCoreDataTests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "TSCoreDataTests/TSCoreDataTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = framework;
+				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
 		};
-		F60A0194174E888D009A7F29 /* Release */ = {
+		F6E1DCF51889AD5700E23A65 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					armv6,
-					"$(ARCHS_STANDARD_32_BIT)",
-				);
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_VERSION = A;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TSCoreData/TSCoreData-Prefix.pch";
-				INFOPLIST_FILE = "TSCoreData/TSCoreData-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = framework;
-			};
-			name = Release;
-		};
-		F60A0196174E888D009A7F29 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				ENABLE_NS_ASSERTIONS = NO;
 				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TSCoreData/TSCoreData-Prefix.pch";
+				GCC_PREFIX_HEADER = "TSCoreDataTests/TSCoreDataTests-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				INFOPLIST_FILE = "TSCoreDataTests/TSCoreDataTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Debug;
-		};
-		F60A0197174E888D009A7F29 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TSCoreData/TSCoreData-Prefix.pch";
-				INFOPLIST_FILE = "TSCoreDataTests/TSCoreDataTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = octest;
+				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
@@ -472,19 +351,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F60A0192174E888D009A7F29 /* Build configuration list for PBXNativeTarget "TSCoreData" */ = {
+		F6E1DCF31889AD5700E23A65 /* Build configuration list for PBXNativeTarget "TSCoreDataTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F60A0193174E888D009A7F29 /* Debug */,
-				F60A0194174E888D009A7F29 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		F60A0195174E888D009A7F29 /* Build configuration list for PBXNativeTarget "TSCoreDataTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F60A0196174E888D009A7F29 /* Debug */,
-				F60A0197174E888D009A7F29 /* Release */,
+				F6E1DCF41889AD5700E23A65 /* Debug */,
+				F6E1DCF51889AD5700E23A65 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

@@ -2,31 +2,33 @@
 //  TSCoreDataTests.m
 //  TSCoreDataTests
 //
-//  Created by Tobias Sundstrand on 2013-05-23.
-//  Copyright (c) 2013 Computertalk Sweden. All rights reserved.
+//  Created by Tobias Sundstrand on 2014-01-17.
+//  Copyright (c) 2014 Computertalk Sweden. All rights reserved.
 //
 
-#import "TSCoreDataTests.h"
+#import <XCTest/XCTest.h>
+
+@interface TSCoreDataTests : XCTestCase
+
+@end
 
 @implementation TSCoreDataTests
 
 - (void)setUp
 {
     [super setUp];
-    
-    // Set-up code here.
+    // Put setup code here. This method is called before the invocation of each test method in the class.
 }
 
 - (void)tearDown
 {
-    // Tear-down code here.
-    
+    // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
 }
 
 - (void)testExample
 {
-    STFail(@"Unit tests are not implemented yet in TSCoreDataTests");
+    
 }
 
 @end
