@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
                    Convenience for handling Core Data when using multiple thread, where the
                    main tread context is used as the main context.
                    DESC
-  s.license = { :type => 'MIT', :file => 'LICENCE.md' }
+  s.license = { :type => 'MIT', :file => 'TSCoreData/Core Data/LICENCE.md' }
   s.homepage     = "https://github.com/laptobbe/TSCoreData"
   s.author       = { "Tobias Sundstrand" => "tobias.sundstrand@gmail.com" }
   s.source       = { :git => "https://github.com/laptobbe/TSCoreData.git", :tag => "0.0.1" }
