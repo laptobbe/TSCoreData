@@ -21,7 +21,7 @@
 		_modelName = modelName;
 		_managedObjectModel = [self dataModelWithModelName:_modelName];
         _storeURL = [self storeURLFromModel:_modelName];
-        _persistantStoreCoordinator = [self persistantStoreCoordinatorWithManagedObjectModel:_managedObjectModel error:error];
+        _persistantStoreCoordinator = [self persistantStoreCoordinatorWithManagedObjectModel:_managedObjectModel storeURL:_storeURL error:error];
     }
     return self;
 }
@@ -40,13 +40,13 @@
 	return [[NSManagedObjectModel alloc] initWithContentsOfURL:momdURL];
 }
 
-- (NSPersistentStoreCoordinator *) persistantStoreCoordinatorWithManagedObjectModel:(NSManagedObjectModel *)managedObjectModel error:(NSError **)error{
+- (NSPersistentStoreCoordinator *) persistantStoreCoordinatorWithManagedObjectModel:(NSManagedObjectModel *)managedObjectModel storeURL:(NSURL *)storeURL error:(NSError **)error{
     
     NSPersistentStoreCoordinator *persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:managedObjectModel];
     
     NSDictionary *options = @{NSMigratePersistentStoresAutomaticallyOption : @YES, NSInferMappingModelAutomaticallyOption : @YES};
     
-    [persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:self.storeURL options:options error:error];
+    [persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:options error:error];
     
     return persistentStoreCoordinator;
 }
