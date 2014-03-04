@@ -9,23 +9,22 @@
 #import <Foundation/Foundation.h>
 #import "NSManagedObjectContext+Convenience.h"
 
-typedef void (^TSCoreDataFetchBlock)(NSManagedObjectContext *context, NSArray *objects, NSError *error);
-typedef void (^TSCoreDataAccessBlock)(NSManagedObjectContext *context);
-
 @protocol TSCoreDataStack <NSObject>
 
-- (NSManagedObjectContext *)createManagedObjectContext;
+- (NSManagedObjectContext *)createManagedObjectContexWithConcurrencyType:(NSManagedObjectContextConcurrencyType)ct;
+
 - (NSPersistentStoreCoordinator *)persistantStoreCoordinator;
 
 @end
 
 @interface TSCoreData : NSObject
 
-+ (id)sharedInstance;
-- (id)initWithCoreDataStack:(id<TSCoreDataStack>)coreDataStack;
+@property(strong, readonly) NSManagedObjectContext *threadSpecificContext;
+@property(strong, readonly) NSManagedObjectContext *mainManagedObjectContext;
 
-- (void)sendRequest:(NSFetchRequest *)fetchRequest withHandleBlock:(TSCoreDataFetchBlock) block;
-- (void)accessAndSaveWithHandleBlock:(TSCoreDataAccessBlock)block saveError:(NSError **)saveError;
-- (void)accessWithHandleBlock:(TSCoreDataAccessBlock)block;
+
++ (instancetype)sharedInstance;
+
+- (instancetype)initWithCoreDataStack:(id <TSCoreDataStack>)coreDataStack;
 
 @end

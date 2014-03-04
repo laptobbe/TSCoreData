@@ -48,7 +48,6 @@
 		F60A0174174E888D009A7F29 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F60A0176174E888D009A7F29 /* TSCoreData-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TSCoreData-Prefix.pch"; sourceTree = "<group>"; };
 		F60A017E174E888D009A7F29 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		F60A0180174E888D009A7F29 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		F60A01B3174EA714009A7F29 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		F60A01B5174EA714009A7F29 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		F6E1DCB81889989600E23A65 /* TSSQLCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSSQLCoreDataStack.h; sourceTree = "<group>"; };
@@ -132,7 +131,6 @@
 				F6E1DCC41889ABCA00E23A65 /* XCTest.framework */,
 				F60A016E174E888D009A7F29 /* Foundation.framework */,
 				F60A017E174E888D009A7F29 /* SenTestingKit.framework */,
-				F60A0180174E888D009A7F29 /* UIKit.framework */,
 				B03F6A62E8CB4A8C80B2A1A9 /* libPods-TSCoreDataTests.a */,
 				F60A01B3174EA714009A7F29 /* CoreGraphics.framework */,
 				F60A01B5174EA714009A7F29 /* CoreData.framework */,

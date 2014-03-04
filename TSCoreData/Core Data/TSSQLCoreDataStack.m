@@ -51,8 +51,8 @@
     return persistentStoreCoordinator;
 }
 
-- (NSManagedObjectContext*) createManagedObjectContext{
-    NSManagedObjectContext *moc = [[NSManagedObjectContext alloc] init];
+- (NSManagedObjectContext *)createManagedObjectContexWithConcurrencyType:(NSManagedObjectContextConcurrencyType)ct {
+    NSManagedObjectContext *moc = [[NSManagedObjectContext alloc] initWithConcurrencyType:ct];
     [moc setMergePolicy:NSMergeByPropertyObjectTrumpMergePolicy];
     [moc setPersistentStoreCoordinator:self.persistantStoreCoordinator];
 	return moc;
