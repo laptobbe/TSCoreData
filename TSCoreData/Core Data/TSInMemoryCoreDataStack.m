@@ -1,7 +1,12 @@
-#import "TSSQLCoreDataStack.h"
+//
+// Created by Tobias Sundstrand on 2014-03-05.
+// Copyright (c) 2014 Computertalk Sweden. All rights reserved.
+//
+
+#import "TSInMemoryCoreDataStack.h"
 #import "TSAbstractCoreDataStack+private.h"
 
-@implementation TSSQLCoreDataStack
+@implementation TSInMemoryCoreDataStack
 
 - (NSPersistentStoreCoordinator *)persistentStoreCoordinatorWithManagedObjectModel:(NSManagedObjectModel *)managedObjectModel storeURL:(NSURL *)storeURL {
 
@@ -9,7 +14,7 @@
     NSDictionary *options = @{NSMigratePersistentStoresAutomaticallyOption : @YES, NSInferMappingModelAutomaticallyOption : @YES};
     NSError *error = nil;
 
-    [persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:options error:&error];
+    [persistentStoreCoordinator addPersistentStoreWithType:NSInMemoryStoreType configuration:nil URL:storeURL options:options error:&error];
 
     if (error)
         return nil;

@@ -11,9 +11,9 @@
 
 @protocol TSCoreDataStack <NSObject>
 
-- (NSManagedObjectContext *)createManagedObjectContexWithConcurrencyType:(NSManagedObjectContextConcurrencyType)ct;
+- (NSManagedObjectContext *)createManagedObjectContextWithConcurrencyType:(NSManagedObjectContextConcurrencyType)ct;
 
-- (NSPersistentStoreCoordinator *)persistantStoreCoordinator;
+- (NSPersistentStoreCoordinator *)persistentStoreCoordinator;
 
 @end
 
@@ -24,6 +24,8 @@
 
 
 + (instancetype)sharedInstance;
+
++ (void)clearSharedInstance;
 
 - (instancetype)initWithCoreDataStack:(id <TSCoreDataStack>)coreDataStack;
 

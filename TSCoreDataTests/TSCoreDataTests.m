@@ -7,28 +7,72 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "TSCoreData.h"
+#import "TSInMemoryCoreDataStack.h"
+
+@interface TSCoreData (test)
+
+- (NSManagedObjectContext *)contextForThread:(NSThread *)thread;
+
+@end
 
 @interface TSCoreDataTests : XCTestCase
+
+@property(strong) TSCoreData *coreData;
 
 @end
 
 @implementation TSCoreDataTests
 
-- (void)setUp
-{
+- (void)setUp {
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    [self setupCoreData];
 }
 
-- (void)tearDown
-{
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
+- (void)setupCoreData {
+    TSInMemoryCoreDataStack *stack = [[TSInMemoryCoreDataStack alloc] initWithModelName:@"Test"];
+    self.coreData = [[TSCoreData alloc] initWithCoreDataStack:stack];
+    NSAssert(self.coreData != nil, @"Could not setup core data");
+}
+
+- (void)tearDown {
+    [self clearCoreData];
     [super tearDown];
 }
 
-- (void)testExample
-{
-    
+- (void)clearCoreData {
+    [TSCoreData clearSharedInstance];
+}
+
+- (void)testGettingMainContext {
+    NSManagedObjectContext *context = self.coreData.mainManagedObjectContext;
+    XCTAssertNotNil(context);
+    XCTAssertTrue(context.concurrencyType == NSMainQueueConcurrencyType);
+}
+
+- (void)testGettingThreadSpecificContextOnMainThread {
+
+    NSManagedObjectContext *context = self.coreData.threadSpecificContext;
+    NSManagedObjectContext *main = self.coreData.mainManagedObjectContext;
+    XCTAssertNotNil(context);
+    XCTAssertNotNil(main);
+    XCTAssertEqual(context, main);
+}
+
+- (void)testThrowsInternalInconsistencyError {
+    [self clearCoreData];
+    XCTAssertThrowsSpecificNamed([TSCoreData sharedInstance], NSException, NSInternalInconsistencyException);
+}
+
+- (void)testGettingBackgroundContext {
+    NSThread *backgroundThread = [[NSThread alloc] init];
+    NSManagedObjectContext *backgroundContext = [self.coreData contextForThread:backgroundThread];
+    XCTAssertNotNil(backgroundContext);
+    XCTAssertNotEqual(backgroundContext, self.coreData.mainManagedObjectContext);
+}
+
+- (void)testGettingThreadSoecificContextOnBackgroundThread {
+
 }
 
 @end

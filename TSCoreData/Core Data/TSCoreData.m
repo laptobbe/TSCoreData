@@ -19,10 +19,14 @@
 
 static TSCoreData *_sharedInstance = nil;
 
++ (void)clearSharedInstance {
+    _sharedInstance = nil;
+}
+
 + (id)sharedInstance {
 
-    //FIXME: Should throw internal inconcistincy error here instead.
-    NSAssert(_sharedInstance != nil, @"You need to call you need to init the stack once for the shared instance to be set");
+    if (!_sharedInstance)
+        [NSException raise:NSInternalInconsistencyException format:@"Need to call initWithCoreDAtaStack: before accessing shared instance"];
     return _sharedInstance;
 }
 
@@ -83,13 +87,19 @@ static TSCoreData *_sharedInstance = nil;
 }
 
 - (void)saveContextForThread:(NSThread *)thread {
+    NSManagedObjectContext *context = [self contextForThread:thread];
+    [self.threadContexts setObject:context forKey:thread.description];
+}
+
+- (NSManagedObjectContext *)contextForThread:(NSThread *)thread {
     NSManagedObjectContext *context;
     if ([thread isEqual:[NSThread mainThread]]) {
-        context = [self.stack createManagedObjectContexWithConcurrencyType:NSMainQueueConcurrencyType];
+        context = [self.stack createManagedObjectContextWithConcurrencyType:NSMainQueueConcurrencyType];
     } else {
-        context = [self.stack createManagedObjectContexWithConcurrencyType:NSConfinementConcurrencyType];
+        context = [self.stack createManagedObjectContextWithConcurrencyType:NSConfinementConcurrencyType];
     }
-    [self.threadContexts setObject:context forKey:thread.description];
+    context.persistentStoreCoordinator = self.stack.persistentStoreCoordinator;
+    return context;
 }
 
 @end
