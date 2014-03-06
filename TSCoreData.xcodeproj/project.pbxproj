@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		CC3C70B0E47B05207A320345 /* TSInMemoryCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3C72A85D9159812665AFBC /* TSInMemoryCoreDataStack.m */; };
+		CC3C71FCBD801E40173D58AA /* TSAsyncTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3C70C70170FC80A016542B /* TSAsyncTesting.m */; };
+		CC3C79D969F04E41E151658A /* TSAsyncTestingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3C740964D41CD2ED8D20B6 /* TSAsyncTestingTests.m */; };
 		CC3C7AC152543F231ABB5121 /* TSAbstractCoreDataStack+private.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3C793548154BCA242694B9 /* TSAbstractCoreDataStack+private.m */; };
 		CC3C7BD6ED807DD2B295C745 /* TSBinaryCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3C706F43132ED2533BEB7A /* TSBinaryCoreDataStack.m */; };
 		CC3C7C9288F5AB4348178330 /* TSAbstractCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3C72F6085E441BBFE75776 /* TSAbstractCoreDataStack.m */; };
@@ -29,8 +31,11 @@
 		B03F6A62E8CB4A8C80B2A1A9 /* libPods-TSCoreDataTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TSCoreDataTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC3C7023C24959D5E78DECDB /* TSInMemoryCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSInMemoryCoreDataStack.h; sourceTree = "<group>"; };
 		CC3C706F43132ED2533BEB7A /* TSBinaryCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSBinaryCoreDataStack.m; sourceTree = "<group>"; };
+		CC3C70C70170FC80A016542B /* TSAsyncTesting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSAsyncTesting.m; sourceTree = "<group>"; };
 		CC3C72A85D9159812665AFBC /* TSInMemoryCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSInMemoryCoreDataStack.m; sourceTree = "<group>"; };
 		CC3C72F6085E441BBFE75776 /* TSAbstractCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSAbstractCoreDataStack.m; sourceTree = "<group>"; };
+		CC3C740964D41CD2ED8D20B6 /* TSAsyncTestingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSAsyncTestingTests.m; sourceTree = "<group>"; };
+		CC3C749CEE1BCBD9CEBC3954 /* TSAsyncTesting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSAsyncTesting.h; sourceTree = "<group>"; };
 		CC3C75FEAAA9F4C5598A4704 /* TSAbstractCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSAbstractCoreDataStack.h; sourceTree = "<group>"; };
 		CC3C78B506C495C0D27EAEC1 /* TSAbstractCoreDataStack+private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TSAbstractCoreDataStack+private.h"; sourceTree = "<group>"; };
 		CC3C793548154BCA242694B9 /* TSAbstractCoreDataStack+private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TSAbstractCoreDataStack+private.m"; sourceTree = "<group>"; };
@@ -168,6 +173,9 @@
 				F60FC71918C74EC90095C5FC /* Test Models */,
 				F6E1DCEB1889AD5700E23A65 /* Supporting Files */,
 				F60FC71618C74D500095C5FC /* Test.xcdatamodeld */,
+				CC3C70C70170FC80A016542B /* TSAsyncTesting.m */,
+				CC3C749CEE1BCBD9CEBC3954 /* TSAsyncTesting.h */,
+				CC3C740964D41CD2ED8D20B6 /* TSAsyncTestingTests.m */,
 			);
 			path = TSCoreDataTests;
 			sourceTree = "<group>";
@@ -261,6 +269,8 @@
 				CC3C7AC152543F231ABB5121 /* TSAbstractCoreDataStack+private.m in Sources */,
 				F60FC71C18C74F0D0095C5FC /* Table.m in Sources */,
 				CC3C7BD6ED807DD2B295C745 /* TSBinaryCoreDataStack.m in Sources */,
+				CC3C71FCBD801E40173D58AA /* TSAsyncTesting.m in Sources */,
+				CC3C79D969F04E41E151658A /* TSAsyncTestingTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

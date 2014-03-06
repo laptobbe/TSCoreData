@@ -37,13 +37,18 @@ static TSCoreData *_sharedInstance = nil;
         _threadContexts = [NSMutableDictionary dictionary];
         _stack = coreDataStack;
 
-        [self saveContextForThread:[NSThread mainThread]];
+        [self saveMainContext];
 
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(contextSaved:) name:NSManagedObjectContextDidSaveNotification object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(threadDone:) name:NSThreadWillExitNotification object:nil];
         _sharedInstance = self;
     }
     return self;
+}
+
+- (void)saveMainContext {
+    NSThread *mainThread = [NSThread mainThread];
+    [self saveContext:[self createContextForThread:mainThread] thread:mainThread];
 }
 
 - (void)dealloc {
@@ -68,8 +73,7 @@ static TSCoreData *_sharedInstance = nil;
 }
 
 - (NSManagedObjectContext *)mainManagedObjectContext {
-    NSString *mainThreadDesc = [[NSThread mainThread] description];
-    return self.threadContexts[mainThreadDesc];
+    return [self managedObjectContextForThread:[NSThread mainThread]];
 }
 
 - (NSManagedObjectContext *)threadSpecificContext {
@@ -80,18 +84,18 @@ static TSCoreData *_sharedInstance = nil;
     @synchronized (self) {
         NSManagedObjectContext *context = [self.threadContexts objectForKey:thread.description];
         if (!context) {
-            [self saveContextForThread:thread];
+            context = [self createContextForThread:thread];
+            [self saveContext:context thread:thread];
         }
         return context;
     }
 }
 
-- (void)saveContextForThread:(NSThread *)thread {
-    NSManagedObjectContext *context = [self contextForThread:thread];
+- (void)saveContext:(NSManagedObjectContext *)context thread:(NSThread *)thread {
     [self.threadContexts setObject:context forKey:thread.description];
 }
 
-- (NSManagedObjectContext *)contextForThread:(NSThread *)thread {
+- (NSManagedObjectContext *)createContextForThread:(NSThread *)thread {
     NSManagedObjectContext *context;
     if ([thread isEqual:[NSThread mainThread]]) {
         context = [self.stack createManagedObjectContextWithConcurrencyType:NSMainQueueConcurrencyType];
