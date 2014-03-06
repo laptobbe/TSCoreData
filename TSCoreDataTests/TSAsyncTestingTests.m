@@ -43,6 +43,15 @@
     XCTAssertFalse(hasRun);
 }
 
+- (void)testOnOwnQueue {
+    __block BOOL hasRun = NO;
+    dispatch_queue_t queue = dispatch_queue_create("Test queue", DISPATCH_QUEUE_SERIAL);
+    [TSAsyncTesting testWithTimeOut:2 onQueue:queue action:^{
+        hasRun = YES;
+    }];
+    XCTAssertTrue(hasRun);
+}
+
 - (void)testBasicWaitAndSignal {
     __block BOOL hasRun = NO;
     dispatch_queue_t queue = dispatch_queue_create("Test queue", DISPATCH_QUEUE_SERIAL);
