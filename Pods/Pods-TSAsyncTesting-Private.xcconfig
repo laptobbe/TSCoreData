@@ -1,0 +1,5 @@
+#include "Pods-TSAsyncTesting.xcconfig"
+GCC_PREPROCESSOR_DEFINITIONS = COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/BuildHeaders" "${PODS_ROOT}/BuildHeaders/TSAsyncTesting" "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/TSAsyncTesting"
+OTHER_LDFLAGS = -ObjC ${PODS_TSASYNCTESTING_OTHER_LDFLAGS}
+PODS_ROOT = ${SRCROOT}

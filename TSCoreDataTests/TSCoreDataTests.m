@@ -7,9 +7,9 @@
 //
 
 #import <XCTest/XCTest.h>
+#import <TSAsyncTesting/TSAsyncTesting.h>
 #import "TSCoreData.h"
 #import "TSInMemoryCoreDataStack.h"
-#import "TSAsyncTesting.h"
 
 @interface TSCoreData (test)
 
