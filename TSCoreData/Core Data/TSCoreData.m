@@ -26,7 +26,7 @@ static TSCoreData *_sharedInstance = nil;
 + (id)sharedInstance {
 
     if (!_sharedInstance)
-        [NSException raise:NSInternalInconsistencyException format:@"Need to call initWithCoreDAtaStack: before accessing shared instance"];
+        [NSException raise:NSInternalInconsistencyException format:@"Need to call initWithCoreDataStack: before accessing shared instance"];
     return _sharedInstance;
 }
 
