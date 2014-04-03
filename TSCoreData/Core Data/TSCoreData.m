@@ -17,17 +17,8 @@
 
 @implementation TSCoreData
 
-static TSCoreData *_sharedInstance = nil;
-
-+ (void)clearSharedInstance {
-    _sharedInstance = nil;
-}
-
-+ (id)sharedInstance {
-
-    if (!_sharedInstance)
-        [NSException raise:NSInternalInconsistencyException format:@"Need to call initWithCoreDataStack: before accessing shared instance"];
-    return _sharedInstance;
++ (instancetype)coreDataWithCoreDataStack:(id <TSCoreDataStack>)coreDataStack {
+    return [[TSCoreData alloc] initWithCoreDataStack:coreDataStack];
 }
 
 - (id)initWithCoreDataStack:(id <TSCoreDataStack>)coreDataStack {
@@ -41,7 +32,6 @@ static TSCoreData *_sharedInstance = nil;
 
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(contextSaved:) name:NSManagedObjectContextDidSaveNotification object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(threadDone:) name:NSThreadWillExitNotification object:nil];
-        _sharedInstance = self;
     }
     return self;
 }

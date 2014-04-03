@@ -20,6 +20,7 @@
 @interface TSCoreDataTests : XCTestCase
 
 @property(strong) TSCoreData *coreData;
+
 @end
 
 @implementation TSCoreDataTests
@@ -35,15 +36,6 @@
     NSAssert(self.coreData != nil, @"Could not setup core data");
 }
 
-- (void)tearDown {
-    [self clearCoreData];
-    [super tearDown];
-}
-
-- (void)clearCoreData {
-    [TSCoreData clearSharedInstance];
-}
-
 - (void)testGettingMainContext {
     NSManagedObjectContext *context = self.coreData.mainManagedObjectContext;
     XCTAssertNotNil(context);
@@ -57,11 +49,6 @@
     XCTAssertNotNil(context);
     XCTAssertNotNil(main);
     XCTAssertEqual(context, main);
-}
-
-- (void)testThrowsInternalInconsistencyError {
-    [self clearCoreData];
-    XCTAssertThrowsSpecificNamed([TSCoreData sharedInstance], NSException, NSInternalInconsistencyException);
 }
 
 - (void)testGettingBackgroundContext {
