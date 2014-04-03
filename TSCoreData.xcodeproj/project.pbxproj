@@ -7,14 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		588CC807F6074510BAFDA45F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6691B00CA11247B29F35D45A /* libPods.a */; };
 		CC3C70B0E47B05207A320345 /* TSInMemoryCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3C72A85D9159812665AFBC /* TSInMemoryCoreDataStack.m */; };
-		CC3C71FCBD801E40173D58AA /* TSAsyncTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3C70C70170FC80A016542B /* TSAsyncTesting.m */; };
-		CC3C79D969F04E41E151658A /* TSAsyncTestingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3C740964D41CD2ED8D20B6 /* TSAsyncTestingTests.m */; };
-		CC3C7AC152543F231ABB5121 /* TSAbstractCoreDataStack+private.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3C793548154BCA242694B9 /* TSAbstractCoreDataStack+private.m */; };
 		CC3C7BD6ED807DD2B295C745 /* TSBinaryCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3C706F43132ED2533BEB7A /* TSBinaryCoreDataStack.m */; };
+		CC3C7C0139962D7A18B6B675 /* NSManagedObject+TSCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3C746CD870247C2DE84F12 /* NSManagedObject+TSCoreData.m */; };
 		CC3C7C9288F5AB4348178330 /* TSAbstractCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3C72F6085E441BBFE75776 /* TSAbstractCoreDataStack.m */; };
+		CC3C7FFD04AE18A2EC95F3D4 /* TSInMemoryCoreDataStackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3C7DD5C69412E2D1C8B332 /* TSInMemoryCoreDataStackTests.m */; };
 		F60FC71318C66C250095C5FC /* TSSQLCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E1DCB91889989600E23A65 /* TSSQLCoreDataStack.m */; };
-		F60FC71418C66C2E0095C5FC /* NSManagedObjectContext+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E1DCBB1889989600E23A65 /* NSManagedObjectContext+Convenience.m */; };
 		F60FC71518C66C330095C5FC /* TSCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E1DCBD1889989600E23A65 /* TSCoreData.m */; };
 		F60FC71818C74D500095C5FC /* Test.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F60FC71618C74D500095C5FC /* Test.xcdatamodeld */; };
 		F60FC71C18C74F0D0095C5FC /* Table.m in Sources */ = {isa = PBXBuildFile; fileRef = F60FC71B18C74F0D0095C5FC /* Table.m */; };
@@ -28,18 +27,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6691B00CA11247B29F35D45A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B03F6A62E8CB4A8C80B2A1A9 /* libPods-TSCoreDataTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TSCoreDataTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC3C7023C24959D5E78DECDB /* TSInMemoryCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSInMemoryCoreDataStack.h; sourceTree = "<group>"; };
 		CC3C706F43132ED2533BEB7A /* TSBinaryCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSBinaryCoreDataStack.m; sourceTree = "<group>"; };
-		CC3C70C70170FC80A016542B /* TSAsyncTesting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSAsyncTesting.m; sourceTree = "<group>"; };
 		CC3C72A85D9159812665AFBC /* TSInMemoryCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSInMemoryCoreDataStack.m; sourceTree = "<group>"; };
 		CC3C72F6085E441BBFE75776 /* TSAbstractCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSAbstractCoreDataStack.m; sourceTree = "<group>"; };
-		CC3C740964D41CD2ED8D20B6 /* TSAsyncTestingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSAsyncTestingTests.m; sourceTree = "<group>"; };
-		CC3C749CEE1BCBD9CEBC3954 /* TSAsyncTesting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSAsyncTesting.h; sourceTree = "<group>"; };
+		CC3C746CD870247C2DE84F12 /* NSManagedObject+TSCoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+TSCoreData.m"; sourceTree = "<group>"; };
 		CC3C75FEAAA9F4C5598A4704 /* TSAbstractCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSAbstractCoreDataStack.h; sourceTree = "<group>"; };
-		CC3C78B506C495C0D27EAEC1 /* TSAbstractCoreDataStack+private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TSAbstractCoreDataStack+private.h"; sourceTree = "<group>"; };
-		CC3C793548154BCA242694B9 /* TSAbstractCoreDataStack+private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TSAbstractCoreDataStack+private.m"; sourceTree = "<group>"; };
+		CC3C78B506C495C0D27EAEC1 /* TSAbstractCoreDataStack+subclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TSAbstractCoreDataStack+subclass.h"; sourceTree = "<group>"; };
+		CC3C7B8D679E352AF23D8DB3 /* NSManagedObject+TSCoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+TSCoreData.h"; sourceTree = "<group>"; };
+		CC3C7DD5C69412E2D1C8B332 /* TSInMemoryCoreDataStackTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSInMemoryCoreDataStackTests.m; sourceTree = "<group>"; };
 		CC3C7E8A41D7DCAAAC5F605F /* TSBinaryCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSBinaryCoreDataStack.h; sourceTree = "<group>"; };
+		EE7C68FFBE8444808DD56822 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		F60A016E174E888D009A7F29 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F60A0172174E888D009A7F29 /* TSCoreData-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TSCoreData-Info.plist"; sourceTree = "<group>"; };
 		F60A0174174E888D009A7F29 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -54,8 +54,6 @@
 		F60FC71E18C74F0E0095C5FC /* Chair.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chair.m; sourceTree = "<group>"; };
 		F6E1DCB81889989600E23A65 /* TSSQLCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSSQLCoreDataStack.h; sourceTree = "<group>"; };
 		F6E1DCB91889989600E23A65 /* TSSQLCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSSQLCoreDataStack.m; sourceTree = "<group>"; };
-		F6E1DCBA1889989600E23A65 /* NSManagedObjectContext+Convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+Convenience.h"; sourceTree = "<group>"; };
-		F6E1DCBB1889989600E23A65 /* NSManagedObjectContext+Convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+Convenience.m"; sourceTree = "<group>"; };
 		F6E1DCBC1889989600E23A65 /* TSCoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCoreData.h; sourceTree = "<group>"; };
 		F6E1DCBD1889989600E23A65 /* TSCoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCoreData.m; sourceTree = "<group>"; };
 		F6E1DCC41889ABCA00E23A65 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -76,6 +74,7 @@
 				F6E1DCE71889AD5700E23A65 /* XCTest.framework in Frameworks */,
 				F6E1DCE91889AD5700E23A65 /* UIKit.framework in Frameworks */,
 				F6E1DCE81889AD5700E23A65 /* Foundation.framework in Frameworks */,
+				588CC807F6074510BAFDA45F /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +88,7 @@
 				F6E1DCEA1889AD5700E23A65 /* TSCoreDataTests */,
 				F60A016D174E888D009A7F29 /* Frameworks */,
 				F60A017D174E888D009A7F29 /* Products */,
+				EE7C68FFBE8444808DD56822 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +102,7 @@
 				B03F6A62E8CB4A8C80B2A1A9 /* libPods-TSCoreDataTests.a */,
 				F60A01B3174EA714009A7F29 /* CoreGraphics.framework */,
 				F60A01B5174EA714009A7F29 /* CoreData.framework */,
+				6691B00CA11247B29F35D45A /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -150,18 +151,17 @@
 			children = (
 				F6E1DCB81889989600E23A65 /* TSSQLCoreDataStack.h */,
 				F6E1DCB91889989600E23A65 /* TSSQLCoreDataStack.m */,
-				F6E1DCBA1889989600E23A65 /* NSManagedObjectContext+Convenience.h */,
-				F6E1DCBB1889989600E23A65 /* NSManagedObjectContext+Convenience.m */,
 				F6E1DCBC1889989600E23A65 /* TSCoreData.h */,
 				F6E1DCBD1889989600E23A65 /* TSCoreData.m */,
 				CC3C72F6085E441BBFE75776 /* TSAbstractCoreDataStack.m */,
 				CC3C75FEAAA9F4C5598A4704 /* TSAbstractCoreDataStack.h */,
 				CC3C72A85D9159812665AFBC /* TSInMemoryCoreDataStack.m */,
 				CC3C7023C24959D5E78DECDB /* TSInMemoryCoreDataStack.h */,
-				CC3C793548154BCA242694B9 /* TSAbstractCoreDataStack+private.m */,
-				CC3C78B506C495C0D27EAEC1 /* TSAbstractCoreDataStack+private.h */,
+				CC3C78B506C495C0D27EAEC1 /* TSAbstractCoreDataStack+subclass.h */,
 				CC3C706F43132ED2533BEB7A /* TSBinaryCoreDataStack.m */,
 				CC3C7E8A41D7DCAAAC5F605F /* TSBinaryCoreDataStack.h */,
+				CC3C746CD870247C2DE84F12 /* NSManagedObject+TSCoreData.m */,
+				CC3C7B8D679E352AF23D8DB3 /* NSManagedObject+TSCoreData.h */,
 			);
 			path = "Core Data";
 			sourceTree = "<group>";
@@ -173,9 +173,7 @@
 				F60FC71918C74EC90095C5FC /* Test Models */,
 				F6E1DCEB1889AD5700E23A65 /* Supporting Files */,
 				F60FC71618C74D500095C5FC /* Test.xcdatamodeld */,
-				CC3C70C70170FC80A016542B /* TSAsyncTesting.m */,
-				CC3C749CEE1BCBD9CEBC3954 /* TSAsyncTesting.h */,
-				CC3C740964D41CD2ED8D20B6 /* TSAsyncTestingTests.m */,
+				CC3C7DD5C69412E2D1C8B332 /* TSInMemoryCoreDataStackTests.m */,
 			);
 			path = TSCoreDataTests;
 			sourceTree = "<group>";
@@ -197,9 +195,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F6E1DCF31889AD5700E23A65 /* Build configuration list for PBXNativeTarget "TSCoreDataTests" */;
 			buildPhases = (
+				5024A2E198C345CB9BD970F7 /* Check Pods Manifest.lock */,
 				F6E1DCE21889AD5700E23A65 /* Sources */,
 				F6E1DCE31889AD5700E23A65 /* Frameworks */,
 				F6E1DCE41889AD5700E23A65 /* Resources */,
+				D06CA07D819D4456958134FA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -234,6 +234,8 @@
 			mainGroup = F60A0160174E888D009A7F29;
 			productRefGroup = F60A017D174E888D009A7F29 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+			);
 			projectRoot = "";
 			targets = (
 				F6E1DCE51889AD5700E23A65 /* TSCoreDataTests */,
@@ -253,6 +255,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5024A2E198C345CB9BD970F7 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D06CA07D819D4456958134FA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F6E1DCE21889AD5700E23A65 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -262,15 +297,13 @@
 				F60FC71518C66C330095C5FC /* TSCoreData.m in Sources */,
 				F60FC71818C74D500095C5FC /* Test.xcdatamodeld in Sources */,
 				F60FC71F18C74F0E0095C5FC /* Chair.m in Sources */,
-				F60FC71418C66C2E0095C5FC /* NSManagedObjectContext+Convenience.m in Sources */,
 				F60FC71318C66C250095C5FC /* TSSQLCoreDataStack.m in Sources */,
 				CC3C7C9288F5AB4348178330 /* TSAbstractCoreDataStack.m in Sources */,
 				CC3C70B0E47B05207A320345 /* TSInMemoryCoreDataStack.m in Sources */,
-				CC3C7AC152543F231ABB5121 /* TSAbstractCoreDataStack+private.m in Sources */,
 				F60FC71C18C74F0D0095C5FC /* Table.m in Sources */,
 				CC3C7BD6ED807DD2B295C745 /* TSBinaryCoreDataStack.m in Sources */,
-				CC3C71FCBD801E40173D58AA /* TSAsyncTesting.m in Sources */,
-				CC3C79D969F04E41E151658A /* TSAsyncTestingTests.m in Sources */,
+				CC3C7FFD04AE18A2EC95F3D4 /* TSInMemoryCoreDataStackTests.m in Sources */,
+				CC3C7C0139962D7A18B6B675 /* NSManagedObject+TSCoreData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +384,7 @@
 		};
 		F6E1DCF41889AD5700E23A65 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE7C68FFBE8444808DD56822 /* Pods.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_ENABLE_MODULES = YES;
@@ -382,6 +416,7 @@
 		};
 		F6E1DCF51889AD5700E23A65 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE7C68FFBE8444808DD56822 /* Pods.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_ENABLE_MODULES = YES;

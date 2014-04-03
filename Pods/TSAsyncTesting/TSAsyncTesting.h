@@ -16,8 +16,6 @@ extern NSString *const TSTestTimeoutException;
 
 + (void)testWithTimeOut:(NSTimeInterval)time onQueue:(dispatch_queue_t)queue action:(dispatch_block_t)action;
 
-+ (void)testWithTimeOut:(NSTimeInterval)time onQueue:(dispatch_queue_t)queue action:(dispatch_block_t)action waitFor:(BOOL(^)())condition;
-
 + (void)signal;
 
 + (void)wait;

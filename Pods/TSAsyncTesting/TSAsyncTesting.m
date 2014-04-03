@@ -8,6 +8,7 @@
 NSString *const TSTestTimeoutException = @"TSTestTimoutException";
 
 static NSUInteger threadCount = 0;
+static dispatch_semaphore_t semaphore = nil;
 #define SUFFICIENT_LONG_WAIT (60 * 60 * 24)
 
 @implementation TSAsyncTesting
@@ -22,17 +23,10 @@ static NSUInteger threadCount = 0;
 }
 
 + (void)testWithTimeOut:(NSTimeInterval)time onQueue:(dispatch_queue_t)queue action:(dispatch_block_t)action {
-    [self testWithTimeOut:time onQueue:queue action:action waitFor:^BOOL {
-        return YES;
-    }];
-}
-
-+ (void)testWithTimeOut:(NSTimeInterval)time onQueue:(dispatch_queue_t)queue action:(dispatch_block_t)action waitFor:(BOOL(^)())condition {
 
     dispatch_async(queue, ^{
         [[NSThread currentThread] setName:[NSString stringWithFormat:@"TSAsyncTesting thread %d", ++threadCount]];
         action();
-        while (!condition());
         [self signal];
     });
     [self waitWithTimeOut:time];
@@ -41,8 +35,6 @@ static NSUInteger threadCount = 0;
 + (void)wait {
     [self waitWithTimeOut:SUFFICIENT_LONG_WAIT];
 }
-
-static dispatch_semaphore_t semaphore = nil;
 
 + (void)initialize {
     semaphore = nil;

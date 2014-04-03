@@ -4,7 +4,7 @@
 //
 
 #import "TSBinaryCoreDataStack.h"
-#import "TSAbstractCoreDataStack+private.h"
+#import "TSAbstractCoreDataStack+subclass.h"
 
 @implementation TSBinaryCoreDataStack
 
