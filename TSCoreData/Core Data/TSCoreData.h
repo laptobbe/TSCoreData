@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "NSManagedObjectContext+TSCoreData.h"
+#import <CoreData/CoreData.h>
 
 @protocol TSCoreDataStack <NSObject>
 
