@@ -6,7 +6,6 @@
 #import <Foundation/Foundation.h>
 #import "TSAbstractCoreDataStack.h"
 
-
 @interface TSBinaryCoreDataStack : TSAbstractCoreDataStack
 
 @end

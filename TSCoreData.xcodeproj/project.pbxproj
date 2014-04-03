@@ -35,7 +35,6 @@
 		CC3C72F6085E441BBFE75776 /* TSAbstractCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSAbstractCoreDataStack.m; sourceTree = "<group>"; };
 		CC3C746CD870247C2DE84F12 /* NSManagedObject+TSCoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+TSCoreData.m"; sourceTree = "<group>"; };
 		CC3C75FEAAA9F4C5598A4704 /* TSAbstractCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSAbstractCoreDataStack.h; sourceTree = "<group>"; };
-		CC3C78B506C495C0D27EAEC1 /* TSAbstractCoreDataStack+subclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TSAbstractCoreDataStack+subclass.h"; sourceTree = "<group>"; };
 		CC3C7B8D679E352AF23D8DB3 /* NSManagedObject+TSCoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+TSCoreData.h"; sourceTree = "<group>"; };
 		CC3C7DD5C69412E2D1C8B332 /* TSInMemoryCoreDataStackTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSInMemoryCoreDataStackTests.m; sourceTree = "<group>"; };
 		CC3C7E8A41D7DCAAAC5F605F /* TSBinaryCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSBinaryCoreDataStack.h; sourceTree = "<group>"; };
@@ -157,7 +156,6 @@
 				CC3C75FEAAA9F4C5598A4704 /* TSAbstractCoreDataStack.h */,
 				CC3C72A85D9159812665AFBC /* TSInMemoryCoreDataStack.m */,
 				CC3C7023C24959D5E78DECDB /* TSInMemoryCoreDataStack.h */,
-				CC3C78B506C495C0D27EAEC1 /* TSAbstractCoreDataStack+subclass.h */,
 				CC3C706F43132ED2533BEB7A /* TSBinaryCoreDataStack.m */,
 				CC3C7E8A41D7DCAAAC5F605F /* TSBinaryCoreDataStack.h */,
 				CC3C746CD870247C2DE84F12 /* NSManagedObject+TSCoreData.m */,

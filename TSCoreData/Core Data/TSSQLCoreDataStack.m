@@ -1,5 +1,4 @@
 #import "TSSQLCoreDataStack.h"
-#import "TSAbstractCoreDataStack+subclass.h"
 
 @implementation TSSQLCoreDataStack
 

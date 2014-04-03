@@ -15,4 +15,9 @@
 
 - (instancetype)initWithModelName:(NSString *)modelName;
 
+/**
+* Override this method in subclasses to provide a persistent store coordinator for your custom stack.
+*/
+- (NSPersistentStoreCoordinator *)persistentStoreCoordinatorWithManagedObjectModel:(NSManagedObjectModel *)managedObjectModel storeURL:(NSURL *)storeURL;
+
 @end

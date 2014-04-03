@@ -4,7 +4,6 @@
 //
 
 #import "TSAbstractCoreDataStack.h"
-#import "TSAbstractCoreDataStack+subclass.h"
 
 @implementation TSAbstractCoreDataStack
 

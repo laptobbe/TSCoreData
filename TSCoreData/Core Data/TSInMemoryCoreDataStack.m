@@ -4,7 +4,6 @@
 //
 
 #import "TSInMemoryCoreDataStack.h"
-#import "TSAbstractCoreDataStack+subclass.h"
 
 @implementation TSInMemoryCoreDataStack
 
