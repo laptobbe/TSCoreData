@@ -7,8 +7,7 @@
 #import <CoreData/CoreData.h>
 #import "TSAbstractCoreDataStack.h"
 
-@interface TSAbstractCoreDataStack (
-private)
+@interface TSAbstractCoreDataStack (subclass)
 
 - (NSPersistentStoreCoordinator *)persistentStoreCoordinatorWithManagedObjectModel:(NSManagedObjectModel *)managedObjectModel storeURL:(NSURL *)storeURL;
 
