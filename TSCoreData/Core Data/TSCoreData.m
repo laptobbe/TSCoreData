@@ -10,8 +10,8 @@
 
 @interface TSCoreData ()
 
-@property(atomic, strong) NSMutableDictionary *threadContexts;
-@property(atomic, strong) id <TSCoreDataStack> stack;
+@property(strong) NSMutableDictionary *threadsMappedToContexts;
+@property(strong) id <TSCoreDataStack> stack;
 
 @end
 
@@ -25,10 +25,10 @@
 
     self = [super init];
     if (self) {
-        _threadContexts = [NSMutableDictionary dictionary];
+        _threadsMappedToContexts = [NSMutableDictionary dictionary];
         _stack = coreDataStack;
 
-        [self saveMainContext];
+        [self createMainContext];
 
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(contextSaved:) name:NSManagedObjectContextDidSaveNotification object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(threadDone:) name:NSThreadWillExitNotification object:nil];
@@ -36,9 +36,10 @@
     return self;
 }
 
-- (void)saveMainContext {
+- (void)createMainContext {
     NSThread *mainThread = [NSThread mainThread];
-    [self saveContext:[self createContextForThread:mainThread] thread:mainThread];
+    NSManagedObjectContext *mainContext = [self createContextForThread:mainThread];
+    [self saveContext:mainContext thread:mainThread];
 }
 
 - (void)dealloc {
@@ -50,7 +51,7 @@
         NSManagedObjectContext *mainContext = self.mainManagedObjectContext;
         NSManagedObjectContext *savedContext = didSaveNotification.object;
 
-        if (mainContext && didSaveNotification.object != mainContext && [self.threadContexts objectForKey:savedContext.description] != nil) {
+        if (mainContext && ![savedContext isEqual:mainContext] && [self.threadsMappedToContexts.allValues containsObject:savedContext]) {
             [mainContext mergeChangesFromContextDidSaveNotification:didSaveNotification];
         }
     });
@@ -58,7 +59,8 @@
 
 - (void)threadDone:(NSNotification *)notification {
     @synchronized (self) {
-        [self.threadContexts removeObjectForKey:[[notification object] description]];
+        NSThread *thread = [notification object];
+        [self deleteContextForThread:thread];
     }
 }
 
@@ -72,7 +74,7 @@
 
 - (NSManagedObjectContext *)managedObjectContextForThread:(NSThread *)thread {
     @synchronized (self) {
-        NSManagedObjectContext *context = [self.threadContexts objectForKey:thread.description];
+        NSManagedObjectContext *context = [self.threadsMappedToContexts objectForKey:thread.description];
         if (!context) {
             context = [self createContextForThread:thread];
             [self saveContext:context thread:thread];
@@ -82,7 +84,11 @@
 }
 
 - (void)saveContext:(NSManagedObjectContext *)context thread:(NSThread *)thread {
-    [self.threadContexts setObject:context forKey:thread.description];
+    [self.threadsMappedToContexts setObject:context forKey:thread.description];
+}
+
+- (void)deleteContextForThread:(NSThread *)thread {
+    [self.threadsMappedToContexts removeObjectForKey:thread.description];
 }
 
 - (NSManagedObjectContext *)createContextForThread:(NSThread *)thread {
