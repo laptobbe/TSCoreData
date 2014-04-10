@@ -7,9 +7,19 @@
 #import <CoreData/CoreData.h>
 #import "TSCoreData.h"
 
+@protocol TSCoreDataStack <NSObject>
+
+- (NSManagedObjectContext *)createManagedObjectContextWithConcurrencyType:(NSManagedObjectContextConcurrencyType)ct;
+- (NSPersistentStoreCoordinator *)persistentStoreCoordinator;
+- (NSManagedObjectModel *)managedObjectModel;
+
+@end
+
 @interface TSAbstractCoreDataStack : NSObject <TSCoreDataStack>
 
 @property(nonatomic, strong) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+@property(nonatomic, strong) NSURL *storeURL;
+@property(nonatomic, strong) NSManagedObjectModel *managedObjectModel;
 
 + (instancetype)coreDataStackWithModelName:(NSString *)modelName;
 

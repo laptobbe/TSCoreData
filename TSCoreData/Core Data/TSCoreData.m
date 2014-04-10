@@ -7,9 +7,13 @@
 //
 
 #import "TSCoreData.h"
+#import "TSAbstractCoreDataStack.h"
+
+NSString *const TSCoreDataErrorDomain = @"TSCoreDataErrorDomain";
 
 @interface TSCoreData ()
 
+@property(strong) NSManagedObjectContext *mainManagedObjectContext;
 @property(strong) NSMutableDictionary *threadsMappedToContexts;
 @property(strong) id <TSCoreDataStack> stack;
 
@@ -27,19 +31,17 @@
     if (self) {
         _threadsMappedToContexts = [NSMutableDictionary dictionary];
         _stack = coreDataStack;
-
-        [self createMainContext];
-
+        _mainManagedObjectContext = [self createContextForMainThread];
+        [self storeContext:_mainManagedObjectContext forThread:[NSThread mainThread]];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(contextSaved:) name:NSManagedObjectContextDidSaveNotification object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(threadDone:) name:NSThreadWillExitNotification object:nil];
     }
     return self;
 }
 
-- (void)createMainContext {
-    NSThread *mainThread = [NSThread mainThread];
-    NSManagedObjectContext *mainContext = [self createContextForThread:mainThread];
-    [self saveContext:mainContext thread:mainThread];
+
+- (void)clearData:(NSError **)error {
+    [self deleteAllObjectsInContext:self.mainManagedObjectContext usingModel:self.stack.managedObjectModel withError:error];
 }
 
 - (void)dealloc {
@@ -47,13 +49,19 @@
 }
 
 - (void)contextSaved:(NSNotification *)didSaveNotification {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        NSManagedObjectContext *mainContext = self.mainManagedObjectContext;
-        NSManagedObjectContext *savedContext = didSaveNotification.object;
+    NSManagedObjectContext *mainContext = self.mainManagedObjectContext;
+    NSManagedObjectContext *savedContext = didSaveNotification.object;
 
-        if (mainContext && ![savedContext isEqual:mainContext] && [self.threadsMappedToContexts.allValues containsObject:savedContext]) {
-            [mainContext mergeChangesFromContextDidSaveNotification:didSaveNotification];
-        }
+    if (savedContext == mainContext) {
+        return;
+    }
+
+    if (mainContext.persistentStoreCoordinator != savedContext.persistentStoreCoordinator) {
+        return;
+    }
+
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [mainContext mergeChangesFromContextDidSaveNotification:didSaveNotification];
     });
 }
 
@@ -64,10 +72,6 @@
     }
 }
 
-- (NSManagedObjectContext *)mainManagedObjectContext {
-    return [self managedObjectContextForThread:[NSThread mainThread]];
-}
-
 - (NSManagedObjectContext *)threadSpecificContext {
     return [self managedObjectContextForThread:[NSThread currentThread]];
 }
@@ -76,14 +80,14 @@
     @synchronized (self) {
         NSManagedObjectContext *context = [self.threadsMappedToContexts objectForKey:thread.description];
         if (!context) {
-            context = [self createContextForThread:thread];
-            [self saveContext:context thread:thread];
+            context = [self createContextForBackgroundThread];
+            [self storeContext:context forThread:thread];
         }
         return context;
     }
 }
 
-- (void)saveContext:(NSManagedObjectContext *)context thread:(NSThread *)thread {
+- (void)storeContext:(NSManagedObjectContext *)context forThread:(NSThread *)thread {
     [self.threadsMappedToContexts setObject:context forKey:thread.description];
 }
 
@@ -91,15 +95,47 @@
     [self.threadsMappedToContexts removeObjectForKey:thread.description];
 }
 
-- (NSManagedObjectContext *)createContextForThread:(NSThread *)thread {
-    NSManagedObjectContext *context;
-    if ([thread isEqual:[NSThread mainThread]]) {
-        context = [self.stack createManagedObjectContextWithConcurrencyType:NSMainQueueConcurrencyType];
-    } else {
-        context = [self.stack createManagedObjectContextWithConcurrencyType:NSConfinementConcurrencyType];
-    }
+- (NSManagedObjectContext *)createContextForMainThread {
+    return [self createContextForConcurrencyType:NSMainQueueConcurrencyType];
+}
+
+- (NSManagedObjectContext *)createContextForBackgroundThread {
+    return [self createContextForConcurrencyType:NSConfinementConcurrencyType];
+}
+
+- (NSManagedObjectContext *)createContextForConcurrencyType:(NSManagedObjectContextConcurrencyType)type {
+    NSManagedObjectContext *context = [self.stack createManagedObjectContextWithConcurrencyType:type];
     context.persistentStoreCoordinator = self.stack.persistentStoreCoordinator;
     return context;
+}
+
+- (void)deleteAllObjectsInContext:(NSManagedObjectContext *)context
+                       usingModel:(NSManagedObjectModel *)model
+                        withError:(NSError **)error {
+    NSArray *entities = model.entities;
+    for (NSEntityDescription *entityDescription in entities) {
+        [self deleteAllObjectsWithEntityName:entityDescription.name
+                                   inContext:context
+                                   withError:error];
+    }
+}
+
+- (void)deleteAllObjectsWithEntityName:(NSString *)entityName
+                             inContext:(NSManagedObjectContext *)context
+                             withError:(NSError **)error {
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:entityName];
+    fetchRequest.includesPropertyValues = NO;
+    fetchRequest.includesSubentities = NO;
+
+    NSArray *items = [context executeFetchRequest:fetchRequest error:error];
+
+    for (NSManagedObject *managedObject in items) {
+        [context deleteObject:managedObject];
+    }
+
+    if (context.hasChanges) {
+        [context save:error];
+    }
 }
 
 @end

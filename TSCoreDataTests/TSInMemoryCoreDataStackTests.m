@@ -24,7 +24,9 @@
     [super setUp];
     id <TSCoreDataStack> stack = [TSInMemoryCoreDataStack coreDataStackWithModelName:@"Test"];
     self.coreData = [TSCoreData coreDataWithCoreDataStack:stack];
-
+    NSError *error = nil;
+    [self.coreData clearData:&error];
+    XCTAssertNil(error);
 }
 
 - (void)testCreatingEntity {

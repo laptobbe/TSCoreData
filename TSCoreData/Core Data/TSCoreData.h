@@ -9,13 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@protocol TSCoreDataStack <NSObject>
-
-- (NSManagedObjectContext *)createManagedObjectContextWithConcurrencyType:(NSManagedObjectContextConcurrencyType)ct;
-
-- (NSPersistentStoreCoordinator *)persistentStoreCoordinator;
-
-@end
+@protocol TSCoreDataStack;
 
 @interface TSCoreData : NSObject
 
@@ -26,4 +20,5 @@
 
 - (instancetype)initWithCoreDataStack:(id <TSCoreDataStack>)coreDataStack;
 
+- (void)clearData:(NSError **)error;
 @end
