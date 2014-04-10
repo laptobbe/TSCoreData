@@ -12,4 +12,5 @@
 
 + (NSFetchRequest *)fetchRequest;
 
++ (NSFetchRequest *)backgroundFetchRequest;
 @end

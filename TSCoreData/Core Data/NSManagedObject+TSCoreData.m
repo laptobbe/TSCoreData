@@ -16,6 +16,12 @@
     return [NSFetchRequest fetchRequestWithEntityName:NSStringFromClass(self)];
 }
 
++ (NSFetchRequest *)backgroundFetchRequest {
+    NSFetchRequest *request = [self fetchRequest];
+    [request setResultType:NSManagedObjectIDResultType];
+    return request;
+}
+
 - (NSEntityDescription *)entityWithManagedObjectContext:(NSManagedObjectContext *)context {
     return [NSEntityDescription entityForName:NSStringFromClass(self.class) inManagedObjectContext:context];
 }

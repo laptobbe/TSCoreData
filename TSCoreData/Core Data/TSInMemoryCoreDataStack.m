@@ -4,7 +4,6 @@
 //
 
 #import "TSInMemoryCoreDataStack.h"
-#import "TSAbstractCoreDataStack+subclass.h"
 
 @implementation TSInMemoryCoreDataStack
 
@@ -12,12 +11,11 @@
 
     NSPersistentStoreCoordinator *persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:managedObjectModel];
     NSDictionary *options = @{NSMigratePersistentStoresAutomaticallyOption : @YES, NSInferMappingModelAutomaticallyOption : @YES};
+
     NSError *error = nil;
-
-    [persistentStoreCoordinator addPersistentStoreWithType:NSInMemoryStoreType configuration:nil URL:storeURL options:options error:&error];
-
-    if (error)
+    if(![persistentStoreCoordinator addPersistentStoreWithType:NSInMemoryStoreType configuration:nil URL:storeURL options:options error:&error] || error) {
         return nil;
+    }
 
     return persistentStoreCoordinator;
 }

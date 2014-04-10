@@ -7,12 +7,27 @@
 #import <CoreData/CoreData.h>
 #import "TSCoreData.h"
 
+@protocol TSCoreDataStack <NSObject>
+
+- (NSManagedObjectContext *)createManagedObjectContextWithConcurrencyType:(NSManagedObjectContextConcurrencyType)ct;
+- (NSPersistentStoreCoordinator *)persistentStoreCoordinator;
+- (NSManagedObjectModel *)managedObjectModel;
+
+@end
+
 @interface TSAbstractCoreDataStack : NSObject <TSCoreDataStack>
 
 @property(nonatomic, strong) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+@property(nonatomic, strong) NSURL *storeURL;
+@property(nonatomic, strong) NSManagedObjectModel *managedObjectModel;
 
 + (instancetype)coreDataStackWithModelName:(NSString *)modelName;
 
 - (instancetype)initWithModelName:(NSString *)modelName;
+
+/**
+* Override this method in subclasses to provide a persistent store coordinator for your custom stack.
+*/
+- (NSPersistentStoreCoordinator *)persistentStoreCoordinatorWithManagedObjectModel:(NSManagedObjectModel *)managedObjectModel storeURL:(NSURL *)storeURL;
 
 @end

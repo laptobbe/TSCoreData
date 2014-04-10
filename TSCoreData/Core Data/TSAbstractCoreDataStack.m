@@ -4,7 +4,6 @@
 //
 
 #import "TSAbstractCoreDataStack.h"
-#import "TSAbstractCoreDataStack+subclass.h"
 
 @implementation TSAbstractCoreDataStack
 
@@ -15,9 +14,9 @@
 - (instancetype)initWithModelName:(NSString *)modelName {
     self = [super init];
     if (self) {
-        NSManagedObjectModel *managedObjectModel = [self dataModelWithModelName:modelName];
-        NSURL *storeURL = [self storeURLFromModel:modelName];
-        self.persistentStoreCoordinator = [self persistentStoreCoordinatorWithManagedObjectModel:managedObjectModel storeURL:storeURL];
+        _managedObjectModel = [self dataModelWithModelName:modelName];
+        _storeURL = [self storeURLFromModel:modelName];
+        _persistentStoreCoordinator = [self persistentStoreCoordinatorWithManagedObjectModel:_managedObjectModel storeURL:_storeURL];
     }
     return self;
 }
@@ -44,7 +43,8 @@
 }
 
 - (NSURL *)storeURLFromModel:(NSString *)modelName {
-    return [[self applicationDocumentsDirectory] URLByAppendingPathComponent:modelName];
+    NSString *databaseFile = [NSString stringWithFormat:@"%@.db", modelName];
+    return [[self applicationDocumentsDirectory] URLByAppendingPathComponent:databaseFile];
 }
 
 
