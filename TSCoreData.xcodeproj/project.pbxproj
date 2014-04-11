@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		588CC807F6074510BAFDA45F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6691B00CA11247B29F35D45A /* libPods.a */; };
 		CC3C70B0E47B05207A320345 /* TSInMemoryCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3C72A85D9159812665AFBC /* TSInMemoryCoreDataStack.m */; };
+		CC3C74E872628B4A2ABB562F /* TSBinaryCoreDataStackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3C7BE52AF8DC480BDDE06F /* TSBinaryCoreDataStackTests.m */; };
 		CC3C765F1A99923D61225304 /* TSSQLCoreDataStackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3C735D9A2C3EE280CB42E7 /* TSSQLCoreDataStackTests.m */; };
 		CC3C7B9C79B551DF065DF1D6 /* NSManagedObject+TSCoreDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3C7B9B19CAF50BA4B80325 /* NSManagedObject+TSCoreDataTests.m */; };
 		CC3C7BD6ED807DD2B295C745 /* TSBinaryCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3C706F43132ED2533BEB7A /* TSBinaryCoreDataStack.m */; };
 		CC3C7C0139962D7A18B6B675 /* NSManagedObject+TSCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3C746CD870247C2DE84F12 /* NSManagedObject+TSCoreData.m */; };
 		CC3C7C9288F5AB4348178330 /* TSAbstractCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3C72F6085E441BBFE75776 /* TSAbstractCoreDataStack.m */; };
+		CC3C7E13794ABCC435E7E4F9 /* TSCoreDataStackTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3C7FDB31B754B3E69B56D5 /* TSCoreDataStackTestCase.m */; };
 		CC3C7FFD04AE18A2EC95F3D4 /* TSInMemoryCoreDataStackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3C7DD5C69412E2D1C8B332 /* TSInMemoryCoreDataStackTests.m */; };
 		F60FC71318C66C250095C5FC /* TSSQLCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E1DCB91889989600E23A65 /* TSSQLCoreDataStack.m */; };
 		F60FC71518C66C330095C5FC /* TSCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E1DCBD1889989600E23A65 /* TSCoreData.m */; };
@@ -36,12 +38,15 @@
 		CC3C72A85D9159812665AFBC /* TSInMemoryCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSInMemoryCoreDataStack.m; sourceTree = "<group>"; };
 		CC3C72F6085E441BBFE75776 /* TSAbstractCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSAbstractCoreDataStack.m; sourceTree = "<group>"; };
 		CC3C735D9A2C3EE280CB42E7 /* TSSQLCoreDataStackTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSSQLCoreDataStackTests.m; sourceTree = "<group>"; };
+		CC3C746050892FE6C6001DB4 /* TSCoreDataStackTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCoreDataStackTestCase.h; sourceTree = "<group>"; };
 		CC3C746CD870247C2DE84F12 /* NSManagedObject+TSCoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+TSCoreData.m"; sourceTree = "<group>"; };
 		CC3C75FEAAA9F4C5598A4704 /* TSAbstractCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSAbstractCoreDataStack.h; sourceTree = "<group>"; };
 		CC3C7B8D679E352AF23D8DB3 /* NSManagedObject+TSCoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+TSCoreData.h"; sourceTree = "<group>"; };
 		CC3C7B9B19CAF50BA4B80325 /* NSManagedObject+TSCoreDataTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+TSCoreDataTests.m"; sourceTree = "<group>"; };
+		CC3C7BE52AF8DC480BDDE06F /* TSBinaryCoreDataStackTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSBinaryCoreDataStackTests.m; sourceTree = "<group>"; };
 		CC3C7DD5C69412E2D1C8B332 /* TSInMemoryCoreDataStackTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSInMemoryCoreDataStackTests.m; sourceTree = "<group>"; };
 		CC3C7E8A41D7DCAAAC5F605F /* TSBinaryCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSBinaryCoreDataStack.h; sourceTree = "<group>"; };
+		CC3C7FDB31B754B3E69B56D5 /* TSCoreDataStackTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCoreDataStackTestCase.m; sourceTree = "<group>"; };
 		EE7C68FFBE8444808DD56822 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		F60A016E174E888D009A7F29 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F60A0172174E888D009A7F29 /* TSCoreData-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TSCoreData-Info.plist"; sourceTree = "<group>"; };
@@ -178,6 +183,9 @@
 				CC3C7DD5C69412E2D1C8B332 /* TSInMemoryCoreDataStackTests.m */,
 				CC3C735D9A2C3EE280CB42E7 /* TSSQLCoreDataStackTests.m */,
 				CC3C7B9B19CAF50BA4B80325 /* NSManagedObject+TSCoreDataTests.m */,
+				CC3C7BE52AF8DC480BDDE06F /* TSBinaryCoreDataStackTests.m */,
+				CC3C7FDB31B754B3E69B56D5 /* TSCoreDataStackTestCase.m */,
+				CC3C746050892FE6C6001DB4 /* TSCoreDataStackTestCase.h */,
 			);
 			path = TSCoreDataTests;
 			sourceTree = "<group>";
@@ -310,6 +318,8 @@
 				CC3C7C0139962D7A18B6B675 /* NSManagedObject+TSCoreData.m in Sources */,
 				CC3C765F1A99923D61225304 /* TSSQLCoreDataStackTests.m in Sources */,
 				CC3C7B9C79B551DF065DF1D6 /* NSManagedObject+TSCoreDataTests.m in Sources */,
+				CC3C74E872628B4A2ABB562F /* TSBinaryCoreDataStackTests.m in Sources */,
+				CC3C7E13794ABCC435E7E4F9 /* TSCoreDataStackTestCase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

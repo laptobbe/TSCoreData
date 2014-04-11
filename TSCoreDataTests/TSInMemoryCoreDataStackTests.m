@@ -11,22 +11,23 @@
 #import "TSInMemoryCoreDataStack.h"
 #import "Chair.h"
 #import "NSManagedObject+TSCoreData.h"
+#import "TSCoreDataStackTestCase.h"
 
-@interface TSInMemoryCoreDataStackTests : XCTestCase
-
-@property(strong) TSCoreData *coreData;
-
+@interface TSInMemoryCoreDataStackTests : TSCoreDataStackTestCase
 @end
 
 @implementation TSInMemoryCoreDataStackTests
 
+
 - (void)setUp {
     [super setUp];
-    id <TSCoreDataStack> stack = [TSInMemoryCoreDataStack coreDataStackWithModelName:@"Test"];
-    self.coreData = [TSCoreData coreDataWithCoreDataStack:stack];
-    NSError *error = nil;
-    [self.coreData clearData:&error];
-    XCTAssertNil(error);
+    [self setupCoreData];
+    [self clearCoreData];
+}
+
+- (void)setupCoreData {
+    [super deleteCoreDataFileForModel:@"Test"];
+    [super setupCoreDataWithStackClass:[TSInMemoryCoreDataStack class] modelName:@"Test"];
 }
 
 - (void)testCreatingEntity {
@@ -79,13 +80,6 @@
 
     NSArray *chairs = [self fetchChairs];
     XCTAssertEqual(chairs.count, 1U);
-}
-
-- (NSArray *)fetchChairs {
-    NSFetchRequest *request = [Chair fetchRequest];
-    NSError *error = nil;
-    NSArray *objects = [self.coreData.threadSpecificContext executeFetchRequest:request error:&error];
-    return objects;
 }
 
 @end

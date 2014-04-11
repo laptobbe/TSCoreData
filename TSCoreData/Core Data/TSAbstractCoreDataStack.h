@@ -21,13 +21,13 @@
 @property(nonatomic, strong) NSURL *storeURL;
 @property(nonatomic, strong) NSManagedObjectModel *managedObjectModel;
 
-+ (instancetype)coreDataStackWithModelName:(NSString *)modelName;
++ (instancetype)coreDataStackWithModelName:(NSString *)modelName error:(NSError **)error;
 
-- (instancetype)initWithModelName:(NSString *)modelName;
+- (instancetype)initWithModelName:(NSString *)modelName error:(NSError **)error;
 
 /**
 * Override this method in subclasses to provide a persistent store coordinator for your custom stack.
 */
-- (NSPersistentStoreCoordinator *)persistentStoreCoordinatorWithManagedObjectModel:(NSManagedObjectModel *)managedObjectModel storeURL:(NSURL *)storeURL;
+- (NSPersistentStoreCoordinator *)persistentStoreCoordinatorWithManagedObjectModel:(NSManagedObjectModel *)managedObjectModel storeURL:(NSURL *)storeURL error:(NSError **)error;
 
 @end

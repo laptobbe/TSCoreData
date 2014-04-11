@@ -8,21 +8,13 @@
 
 #import <XCTest/XCTest.h>
 #import <TSAsyncTesting/TSAsyncTesting.h>
-#import "TSCoreData.h"
 #import "TSSQLCoreDataStack.h"
 #import "Chair.h"
 #import "NSManagedObject+TSCoreData.h"
 #import "Table.h"
+#import "TSCoreDataStackTestCase.h"
 
-@interface TSCoreData (Tests)
-
-@property(strong) NSMutableDictionary *threadsMappedToContexts;
-
-@end
-
-@interface TSSQLCoreDataStackTests : XCTestCase
-
-@property(nonatomic, strong) TSCoreData *coreData;
+@interface TSSQLCoreDataStackTests : TSCoreDataStackTestCase
 @end
 
 @implementation TSSQLCoreDataStackTests
@@ -42,26 +34,8 @@
 }
 
 - (void)setupCoreData {
-    id <TSCoreDataStack> stack = [TSSQLCoreDataStack coreDataStackWithModelName:@"Test"];
-    self.coreData = [TSCoreData coreDataWithCoreDataStack:stack];
-}
-
-- (void)clearCoreData {
-    NSError *error = nil;
-    [self.coreData clearData:&error];
-    XCTAssertNil(error);
-}
-
-- (void)cleanRegisteredObjects {
-    for (NSManagedObjectContext *context in self.coreData.threadsMappedToContexts.allValues) {
-        [context reset];
-    }
-}
-
-- (void)verifyRegisteredObjects {
-    for (NSManagedObjectContext *context in self.coreData.threadsMappedToContexts.allValues) {
-        XCTAssertEqual(context.registeredObjects.count, 0U);
-    }
+    [super deleteCoreDataFileForModel:@"Test"];
+    [super setupCoreDataWithStackClass:[TSSQLCoreDataStack class] modelName:@"Test"];
 }
 
 - (void)testClearingSQLStore {
@@ -145,17 +119,4 @@
     XCTAssertEqual(chairs.count, 1U);
 }
 
-- (NSArray *)fetchChairs {
-    NSFetchRequest *request = [Chair fetchRequest];
-    NSError *error = nil;
-    NSArray *objects = [self.coreData.threadSpecificContext executeFetchRequest:request error:&error];
-    return objects;
-}
-
-- (NSArray *)fetchTables {
-    NSFetchRequest *request = [Table fetchRequest];
-    NSError *error = nil;
-    NSArray *objects = [self.coreData.threadSpecificContext executeFetchRequest:request error:&error];
-    return objects;
-}
 @end
