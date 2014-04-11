@@ -1,23 +1,24 @@
 //
-//  TSSQLCoreDataStackTests.m
+//  TSBinaryCoreDataStackTests.m
 //  TSCoreData
 //
-//  Created by Tobias Sundstrand on 2014-04-08.
+//  Created by Tobias Sundstrand on 2014-04-11.
 //  Copyright (c) 2014 Computertalk Sweden. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
 #import <TSAsyncTesting/TSAsyncTesting.h>
-#import "TSSQLCoreDataStack.h"
+#import "TSCoreDataStackTestCase.h"
+#import "TSBinaryCoreDataStack.h"
 #import "Chair.h"
 #import "NSManagedObject+TSCoreData.h"
 #import "Table.h"
-#import "TSCoreDataStackTestCase.h"
 
-@interface TSSQLCoreDataStackTests : TSCoreDataStackTestCase
+@interface TSBinaryCoreDataStackTests : TSCoreDataStackTestCase
+
 @end
 
-@implementation TSSQLCoreDataStackTests
+@implementation TSBinaryCoreDataStackTests
 
 - (void)setUp {
     [super setUp];
@@ -35,10 +36,10 @@
 
 - (void)setupCoreData {
     [super deleteCoreDataFileForModel:@"Test"];
-    [super setupCoreDataWithStackClass:[TSSQLCoreDataStack class] modelName:@"Test"];
+    [super setupCoreDataWithStackClass:[TSBinaryCoreDataStack class] modelName:@"Test"];
 }
 
-- (void)testClearingSQLStore {
+- (void)testClearingBinaryStore {
     Chair *chair = [[Chair alloc] initWithManagedObjectContext:self.coreData.threadSpecificContext];
     chair.material = @"Wood";
     chair.height = @1.23;
@@ -64,7 +65,6 @@
     XCTAssertEqual(chairs.count, 0U);
     XCTAssertEqual(tables.count, 0U);
 }
-
 
 - (void)testCreatingEntity {
     Chair *chair = [[Chair alloc] initWithManagedObjectContext:self.coreData.threadSpecificContext];
@@ -118,5 +118,4 @@
     NSArray *chairs = [self fetchChairs];
     XCTAssertEqual(chairs.count, 1U);
 }
-
 @end

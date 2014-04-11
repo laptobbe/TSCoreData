@@ -29,7 +29,9 @@
 }
 
 - (void)setupCoreData {
-    TSInMemoryCoreDataStack *stack = [[TSInMemoryCoreDataStack alloc] initWithModelName:@"Test"];
+    NSError *error = nil;
+    TSInMemoryCoreDataStack *stack = [[TSInMemoryCoreDataStack alloc] initWithModelName:@"Test" error:&error];
+    XCTAssertNil(error);
     self.coreData = [[TSCoreData alloc] initWithCoreDataStack:stack];
     NSAssert(self.coreData != nil, @"Could not setup core data");
 }
