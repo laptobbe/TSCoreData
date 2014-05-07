@@ -9,8 +9,6 @@
 #import "TSCoreData.h"
 #import "TSAbstractCoreDataStack.h"
 
-NSString *const TSCoreDataErrorDomain = @"TSCoreDataErrorDomain";
-
 @interface TSCoreData ()
 
 @property(strong) NSManagedObjectContext *mainManagedObjectContext;

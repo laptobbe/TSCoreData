@@ -1,10 +1,10 @@
 PODS:
-  - TSAsyncTesting (1.1)
+  - TSAsyncTesting (1.2)
 
 DEPENDENCIES:
   - TSAsyncTesting
 
 SPEC CHECKSUMS:
-  TSAsyncTesting: bd76ffbb0d76d8dff76a2c4a5549d929520e28e3
+  TSAsyncTesting: c965cfbad1f2fab0a748dbf774bb057c649437eb
 
-COCOAPODS: 0.29.0
+COCOAPODS: 0.32.1
