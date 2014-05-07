@@ -8,7 +8,7 @@
 NSString *const TSTestTimeoutException = @"TSTestTimoutException";
 
 static NSUInteger threadCount = 0;
-static dispatch_semaphore_t semaphore = nil;
+static id locked = nil;
 #define SUFFICIENT_LONG_WAIT (60 * 60 * 24)
 
 @implementation TSAsyncTesting
@@ -47,24 +47,31 @@ static dispatch_semaphore_t semaphore = nil;
 }
 
 + (void)initialize {
-    semaphore = nil;
+    locked = nil;
 }
 
 + (void)waitWithTimeOut:(NSTimeInterval)timeOut {
-    semaphore = dispatch_semaphore_create(0);
-    long result = dispatch_semaphore_wait(semaphore, [self dispatchTimeFromTimeInterval:timeOut]);
-    semaphore = nil;
-    if (result != 0) {
+    locked = @YES;
+    NSDate *deadline = [NSDate dateWithTimeIntervalSinceNow:timeOut];
+    BOOL timedOut = NO;
+
+    while (locked && !timedOut) {
+        [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode
+                                 beforeDate:[NSDate date]];
+        timedOut = [self hasTimedOutWithDeadline:deadline];
+    }
+
+    if (timedOut) {
         [NSException raise:TSTestTimeoutException format:@"TSAsyncTesting timed out waiting, waited for: %.1f seconds", timeOut];
     }
 }
 
-+ (dispatch_time_t)dispatchTimeFromTimeInterval:(NSTimeInterval)timeInterval {
-    return dispatch_time(DISPATCH_TIME_NOW, (int64_t) (timeInterval * NSEC_PER_SEC));
++ (BOOL)hasTimedOutWithDeadline:(NSDate *)date {
+    return [date earlierDate:[NSDate date]] == date;
 }
 
 + (void)blockThread {
-    for (; ;);
+    for(;;);
 }
 
 + (void)signalWhen:(TSAsyncWhenBlock)block {
@@ -75,10 +82,10 @@ static dispatch_semaphore_t semaphore = nil;
 }
 
 + (void)signal {
-    if (!semaphore) {
+    if (!locked) {
         [NSException raise:NSInternalInconsistencyException format:@"No waiting action"];
     }
-    dispatch_semaphore_signal(semaphore);
+    locked = nil;
 }
 
 @end
