@@ -9,6 +9,6 @@
 // TSAsyncTesting
 #define COCOAPODS_POD_AVAILABLE_TSAsyncTesting
 #define COCOAPODS_VERSION_MAJOR_TSAsyncTesting 1
-#define COCOAPODS_VERSION_MINOR_TSAsyncTesting 0
+#define COCOAPODS_VERSION_MINOR_TSAsyncTesting 2
 #define COCOAPODS_VERSION_PATCH_TSAsyncTesting 0
 

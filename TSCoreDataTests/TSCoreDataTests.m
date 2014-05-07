@@ -12,9 +12,7 @@
 #import "TSInMemoryCoreDataStack.h"
 
 @interface TSCoreData (test)
-
-- (NSManagedObjectContext *)createContextForThread:(NSThread *)thread;
-
+- (NSManagedObjectContext *)managedObjectContextForThread:(NSThread *)thread;
 @end
 
 @interface TSCoreDataTests : XCTestCase
@@ -31,7 +29,9 @@
 }
 
 - (void)setupCoreData {
-    TSInMemoryCoreDataStack *stack = [[TSInMemoryCoreDataStack alloc] initWithModelName:@"Test"];
+    NSError *error = nil;
+    TSInMemoryCoreDataStack *stack = [[TSInMemoryCoreDataStack alloc] initWithModelName:@"Test" error:&error];
+    XCTAssertNil(error);
     self.coreData = [[TSCoreData alloc] initWithCoreDataStack:stack];
     NSAssert(self.coreData != nil, @"Could not setup core data");
 }
@@ -53,7 +53,7 @@
 
 - (void)testGettingBackgroundContext {
     NSThread *backgroundThread = [[NSThread alloc] init];
-    NSManagedObjectContext *backgroundContext = [self.coreData createContextForThread:backgroundThread];
+    NSManagedObjectContext *backgroundContext = [self.coreData managedObjectContextForThread:backgroundThread];
     XCTAssertNotNil(backgroundContext);
     XCTAssertNotEqual(backgroundContext, self.coreData.mainManagedObjectContext);
 }

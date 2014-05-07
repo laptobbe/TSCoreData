@@ -5,16 +5,21 @@
 
 #import <Foundation/Foundation.h>
 
+typedef BOOL (^TSAsyncWhenBlock)();
+
+typedef void (^TSAsyncActionBlock)();
 
 extern NSString *const TSTestTimeoutException;
 
 @interface TSAsyncTesting : NSObject
 
-+ (void)testOnBackgroundQueue:(dispatch_block_t)block;
++ (void)testOnBackgroundQueue:(TSAsyncActionBlock)action;
 
-+ (void)testOnBackgroundQueueTimeOut:(NSTimeInterval)time1 action:(dispatch_block_t)block;
++ (void)testOnBackgroundQueueTimeOut:(NSTimeInterval)time1 action:(TSAsyncActionBlock)action;
 
-+ (void)testWithTimeOut:(NSTimeInterval)time onQueue:(dispatch_queue_t)queue action:(dispatch_block_t)action;
++ (void)testOnBackgroundQueueTimeOut:(NSTimeInterval)time action:(TSAsyncActionBlock)action signalWhen:(TSAsyncWhenBlock)when;
+
++ (void)testWithTimeOut:(NSTimeInterval)time onQueue:(dispatch_queue_t)queue action:(TSAsyncActionBlock)action signalWhen:(TSAsyncWhenBlock)when;
 
 + (void)signal;
 
@@ -23,4 +28,8 @@ extern NSString *const TSTestTimeoutException;
 + (void)waitWithTimeOut:(NSTimeInterval)timeOut;
 
 + (void)blockThread;
+
++ (void)signalWhen:(TSAsyncWhenBlock)when;
+
+
 @end
